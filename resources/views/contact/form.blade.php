@@ -4,8 +4,6 @@
 
 <div class="hero single-page" id="slider" style="min-height: 420px">
     <div class="red-back" style="top: -250px; right: 0"></div>
-    <!-- <div class="grey-back" style="top: -350px"></div> -->
-    <!-- <div class="blue-back" style="top:-450px"></div> -->
     
     <div class="container" id="slider-content" style="margin-top: 7em">
         <div class="columns">
@@ -28,6 +26,7 @@
 						@include('includes.notification')
 						<form action="/contact" method="post">
 							{{ csrf_field() }}
+							<h3 class="title is-5">Use the form below to contact us</h3>
 							<div class="field">
 								<div class="control">
 									<input type="text" name="fullname" placeholder="Your name" class="input {{ ($errors->has('fullname')) ? 'is-danger' : '' }}">
@@ -65,7 +64,7 @@
 							</div>
 							<div class="field">
 								<div class="control">
-									<button type="submit" class="button is-link is-block is-medium">
+									<button type="submit" class="button is-link is-large">
 										Submit
 									</button>
 								</div>

@@ -291,6 +291,27 @@ aside{
 .footer{
 	background-color: hsl(0, 0%, 21%);
 	color: #aaa;
+	.footer-menu{
+		margin: 0;
+		padding: 0;
+		li{
+			display: inline-block;
+			a{
+				color: rgba(255,255,255,.4);
+				display: block;
+				margin-right: 2em;
+				&:hover{
+					color: rgba(255,255,255,.8);
+				}
+				&:last-of-type{
+					margin-right: 0;
+				}
+			}
+		}
+	}
+	hr{
+		opacity: 0.1;
+	}
 }
 
 .is-grayish{
@@ -299,6 +320,7 @@ aside{
 		color: #aaa !important;
 		&:hover {
 			color: #fff !important;
+			background: none !important;
 		}
 	}
 }

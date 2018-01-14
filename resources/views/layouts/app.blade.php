@@ -55,12 +55,30 @@
         
         <footer class="footer">
             <div class="container">
-                <div class="content has-text-centered">
-                    <p>
-                        <strong>Bulma</strong> by <a href="http://jgthms.com">Jeremy Thomas</a>. The source code is licensed
-                        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-                        is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-                    </p>
+                <div class="level">
+                    <div class="level-left is-size-7">
+                        <ul class="footer-menu">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/about">About</a></li>
+                            <li><a href="/pricing">Pricing</a></li>
+                            <li><a href="/contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="level-item has-text-center">
+                        <a href="/"><img src="{{ asset('images/logo.png') }}" alt="{{ config('app.name') }}" style="width: 100px; height: auto; opacity: .2"></a>
+                    </div>
+                    <div class="level-right is-size-7">
+                        <ul class="footer-menu has-text-right">
+                            <li><a href="/">Terms of Service</a></li>
+                            <li><a href="/about">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <div class="level">
+                    <div class="level-item has-text-centered">
+                        <span class="is-size-7" style="opacity: .4">Copyright &copy; {{ config('app.name') }}  2018 | A service provided by <a href="http://clickmedia.com.ng" class="has-text-white-ter">Clickmedia Solutions</a></span>
+                    </div>
                 </div>
             </div>
         </footer>

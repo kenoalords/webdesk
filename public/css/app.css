@@ -286,6 +286,25 @@ aside .menu-list a:hover {
   color: #aaa;
 }
 
+.footer .footer-menu {
+  margin: 0;
+  padding: 0;
+}
+
+.footer .footer-menu li {
+  display: inline-block;
+}
+
+.footer .footer-menu li a {
+  color: rgba(255, 255, 255, 0.4);
+  display: block;
+  margin: 0 1em;
+}
+
+.footer hr {
+  opacity: 0.1;
+}
+
 .is-grayish {
   background-color: #2e363f;
 }
@@ -296,6 +315,7 @@ aside .menu-list a:hover {
 
 .is-grayish a:hover {
   color: #fff !important;
+  background: none !important;
 }
 
 .naira:before {

@@ -11,8 +11,8 @@
     <div class="container" id="slider-content">
         <div class="columns">
             <div class="column is-8 is-offset-2 has-text-centered ">
-                <h1 class="title is-1 has-text-white">We are webdesk</h1>
-                <h4 class="subtitle has-text-white" style="margin-top: .5em">We offer Bespoke, feature packed and top notch support across all packages</h4>
+                <h1 class="title is-1 has-text-white">We are webdesk.ng</h1>
+                <h4 class="subtitle has-text-white" style="margin-top: .5em">We offer Bespoke, feature packed and top notch website services.</h4>
             </div>
         </div>
     </div>
@@ -29,7 +29,10 @@
         </p>
     </div>
 </div>
-
+<div class="container">
+    <h3 class="title is-4 has-text-centered" style="margin-bottom: 1em;">Some of our works</h3>
+</div>
+@include('includes.works')
 
 <div class="hero">
     <div class="hero-body">
@@ -39,9 +42,9 @@
                     <h2 class="title is-4 pointing-header"><i class="fa fa-comments"></i> What our customers say</h2>
                     <div class="testimonials">
                         <div>
-                            <p>I created my business around 6 months ago with very little capital but needed a website to help market. I was actually recommended Cloud Web Solutions and from day 1 I've had the most amazing experience. Not only was my website designed to a high standard, I pay a monthly direct debit that has helped in my first year. I also know after 2 years, I can rebrand and keep my costs. Jack has been fantastic, and would recommend all businesses to use this fantastic service. I will also add, all my queries and requests are always dealt with very quickly and extremely professionally.</p>
+                            <p>I find the developers at Webdesk.ng very professional and committed to delivering quality service to their customers.  Their attention to detail and understanding of what the client needs a refreshing change to my past experience with website developers.  I would definitely recommend Webdesk.ng to my friends</p>
                             <h4 class="title is-4 text-is-uppercase">Kolawole Olarewaju</h4> 
-                            <h5 class="subtitle">Founder, Komotion Studio</h5>                   
+                            <h5 class="subtitle">Founder, Komotion Studios</h5>                   
                         </div>
                     </div>
                 </div>
