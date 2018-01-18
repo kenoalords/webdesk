@@ -1,4 +1,6 @@
 @extends('layouts.app')
+@section('title', 'Professional website designers in Lagos | ')
+@section('description', 'Own a professional website for as low as ₦3,500/Monthly. You also get SEO Optimization, Graphics design and Online marketing solutions. Sign up today')
 
 @section('content')
 
@@ -6,14 +8,7 @@
     <div class="red-back"></div>
     <div class="grey-back"></div>
     <div class="blue-back"></div>
-    <!-- <figure class="image">
-        <img src="{{ asset('images/hero.jpg') }}" alt="">
-        <figcaption>
-            <h2 class="title is-3">Now I can focus on what I do best</h2>
-            <p class="subtitle">webfolly takes care of the rest</p>
-            <p><a href="#" class="button is-outlined is-white">Find out how</a></p>
-        </figcaption>
-    </figure> -->
+    
     <div class="container" id="slider-content">
         <div class="hero is-small has-text-centered-mobile">
             <div class="hero-body">

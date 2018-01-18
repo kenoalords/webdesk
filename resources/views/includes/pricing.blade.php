@@ -28,7 +28,7 @@
                                     <li>Quaterly Scheduled Maintenance</li>
                                 </ul>
                                 <div class="card-footer">
-                                    <a href="/register?type=1" class="card-footer-item button is-success is-large no-border-radius">I want this plan</a>
+                                    <a href="/register?type=1" class="card-footer-item button is-success is-large no-border-radius has-text-weight-bold">I want this plan</a>
                                 </div>
                             </div>
                         </div>
@@ -57,7 +57,7 @@
                                     <li>Blog</li>
                                 </ul>
                                 <div class="card-footer">
-                                    <a href="/register?type=2" class="card-footer-item button is-link is-large no-border-radius">I want this plan</a>
+                                    <a href="/register?type=2" class="card-footer-item button is-link is-large no-border-radius has-text-weight-bold">I want this plan</a>
                                 </div>
                             </div>
                         </div>
@@ -85,7 +85,7 @@
                                     <li>Blog</li>
                                 </ul>
                                 <div class="card-footer">
-                                    <a href="/contact" class="card-footer-item button is-primary is-large no-border-radius">Contact us</a>
+                                    <a href="/contact" class="card-footer-item button is-primary is-large no-border-radius has-text-weight-bold">Contact us</a>
                                 </div>
                             </div>
                         </div>

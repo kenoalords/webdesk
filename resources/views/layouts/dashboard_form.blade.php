@@ -54,5 +54,11 @@
         </div>
         
         <script src="{{ asset('js/app.js') }}"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-112666247-1');
+        </script>
     </body>
 </html>

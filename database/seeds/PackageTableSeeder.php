@@ -16,14 +16,14 @@ class PackageTableSeeder extends Seeder
         		'basic'	=> [
         			'name'		=> 'Basic Package',
         			'features'	=> 'Up to 5 pages',
-        			'monthly_cost'	=> 3499,
-        			'setup_cost'	=> 9999
+        			'monthly_cost'	=> 3500,
+        			'setup_cost'	=> 10000
         		],
         		'business'	=> [
         			'name'		=> 'Business Package',
         			'features'	=> 'Up to 15 pages',
-        			'monthly_cost'	=> 5499,
-        			'setup_cost'	=> 14999
+        			'monthly_cost'	=> 5000,
+        			'setup_cost'	=> 15000
         		],
         	];
 

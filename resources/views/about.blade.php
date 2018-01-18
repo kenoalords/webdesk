@@ -1,5 +1,8 @@
 @extends('layouts.app')
 
+@section('title', 'About Us | ')
+@section('description', 'We are a team of professional website designers and digital media consultants.')
+
 @section('content')
 
 <div class="hero single-page" id="slider">

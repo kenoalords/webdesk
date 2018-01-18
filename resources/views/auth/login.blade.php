@@ -1,5 +1,8 @@
 @extends('layouts.account')
 
+@section('title', 'Login | ')
+@section('description', 'Log into your account and manage your subscription')
+
 @section('content')
 <div class="hero is-medium is-light">
     <div class="hero-body">

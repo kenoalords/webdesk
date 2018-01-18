@@ -1,5 +1,8 @@
 @extends('layouts.account')
 
+@section('title', 'Reset your password | ')
+@section('description', 'Lost your password? No problem. Enter your email address below to recover your password')
+
 @section('content')
 <div class="hero is-medium">
     <div class="hero-body">

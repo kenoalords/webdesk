@@ -1,5 +1,8 @@
 @extends('layouts.account')
 
+@section('title', 'Sign up | ')
+@section('description', 'Sign up and get a professional bespoke website for as low as ₦3,500/Monthly.')
+
 @section('content')
 <form class="signup-form" method="POST" action="{{ route('register') }}">
 {{ csrf_field() }}
