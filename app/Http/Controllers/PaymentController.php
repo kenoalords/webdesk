@@ -87,7 +87,7 @@ class PaymentController extends Controller
             }
             $subscription->save();
 
-            Mail::to($request->user())->bcc(config('app.email'))->send(new PaymentNotification($ID, $paystack_id, $paystack_reference, $amount_paid));
+            Mail::to($request->user())->bcc(config('app.email.billing'))->send(new PaymentNotification($ID, $paystack_id, $paystack_reference, $amount_paid));
 
             return redirect()->route('show_receipt', ['invoice' => $invoice->id]);
         }

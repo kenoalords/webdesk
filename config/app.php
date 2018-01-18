@@ -53,7 +53,12 @@ return [
     */
 
     'url' => env('APP_URL', 'http://websitebuilder.com:8000'),
-    'email' => 'kenoalords@gmail.com',
+    'email' => [
+        'billing'   => 'billing@webdesk.ng',
+        'contact'   => 'contact@webdesk.ng',
+        'hello'     => 'hello@webdesk.ng',
+        'support'   => 'support@webdesk.ng',
+    ],
 
     /*
     |--------------------------------------------------------------------------

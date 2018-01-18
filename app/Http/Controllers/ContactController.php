@@ -35,7 +35,7 @@ class ContactController extends Controller
 			'message'		=> $request->message,
 			'ip'			=> $request->ip(),
 		]);
-		Mail::to(config('app.email'))->send(new ContactFormNotification($request->fullname, $request->email, $request->contact_number, $request->subject, $request->message));
+		Mail::to(config('app.email.contact'))->send(new ContactFormNotification($request->fullname, $request->email, $request->contact_number, $request->subject, $request->message));
 		Mail::to($request->email)->send(new ContactFormNotificationResponse($request->fullname));
 		$request->session()->flash('status', 'Received! We typically respond within 12 hours.');
 		return redirect()->route('contact_form');

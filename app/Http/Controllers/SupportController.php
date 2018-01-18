@@ -36,7 +36,7 @@ class SupportController extends Controller
 				'message'		=> $request->message,
 			]);
 		if($submit){
-			Mail::to(config('app.email'))->send(new ContactSubmitNotification($request->subscription_id, $request->department, $request->subject, $request->message));
+			Mail::to(config('app.email.support'))->send(new ContactSubmitNotification($request->subscription_id, $request->department, $request->subject, $request->message));
 			$request->session()->flash('status', 'Your contact enquiry was submitted successfully!');
 			return redirect()->route('admin_contact');
 		}

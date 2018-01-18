@@ -81,7 +81,7 @@ class SubscriptionController extends Controller
     		]);
     		if( $invoice ) {
                 // Send email notification
-                Mail::to($r->user())->bcc(config('app.email'))->send(new SubscriptionNotification($invoice->id));
+                Mail::to($r->user())->bcc(config('app.email.billing'))->send(new SubscriptionNotification($invoice->id));
     			return redirect()->route('show_invoice', ['invoice' => $invoice->id]);
     		}
     	}
