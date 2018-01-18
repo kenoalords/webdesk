@@ -19,7 +19,7 @@ class CreateContactFormsTable extends Migration
             $table->string('email');
             $table->string('contact_number')->nullable();
             $table->string('subject')->nullable();
-            $table->string('message');
+            $table->text('message');
             $table->ipAddress('ip');
             $table->timestamps();
         });
