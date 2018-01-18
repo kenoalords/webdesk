@@ -1,6 +1,10 @@
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
     <head>
+
+        <!-- CSRF Token -->
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+
         <meta name="robots" content="index, no-follow" />
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,8 +20,11 @@
         <link rel="stylesheet" href="{{ asset('css/default.css') }}">
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     </head>
-    <body id="app">
-        @yield('content')
+    <body>
+        <div id="app">
+            @yield('content')
+        </div>
+        
         <script src="{{ asset('js/app.js') }}"></script>
     </body>
 </html>

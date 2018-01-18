@@ -15,23 +15,27 @@
         </figcaption>
     </figure> -->
     <div class="container" id="slider-content">
-        <div class="columns">
-            <div class="column is-8 is-offset-2">
+        <div class="hero is-small has-text-centered-mobile">
+            <div class="hero-body">
                 <div class="columns">
-                    <div class="column is-6">
-                        <h1 class="title is-1 has-text-white">
-                            Let us build and manage your dream website
-                        </h1>
-                        <p><a href="/register" class="button is-outlined is-white"><span>Get started</span> <span class="icon"><i class="fa fa-arrow-right"></i></span></a></p>
-                    </div>
-                    <div class="column is-6">
-                        <figure class="image">
-                            <img src="{{ asset('images/imac.png') }}" alt="Webdesk work sample">
-                        </figure>
+                    <div class="column is-8 is-offset-2">
+                        <div class="columns">
+                            <div class="column is-6">
+                                <h1 class="title is-1 has-text-white is-size-3-mobile">
+                                    Let us build and manage your dream website
+                                </h1>
+                                <p><a href="/register" class="button is-outlined is-white"><span>Get started</span> <span class="icon"><i class="fa fa-arrow-right"></i></span></a></p>
+                            </div>
+                            <div class="column is-6">
+                                <figure class="image">
+                                    <img src="{{ asset('images/imac.png') }}" alt="Webdesk work sample">
+                                </figure>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>  
     </div>
 </div>
 
@@ -39,12 +43,10 @@
     <div class="hero-body">
         <div class="columns">
             <div class="column is-8 is-offset-2 has-text-centered">
-                <h1 class="title is-2" style="letter-spacing: -1px">Get a bespoke professional website to showcase your business, <span class="has-text-success">pay monthly.</span></h1>
-                <!-- <h2>Best pay monthly website service in Nigeria</h2> -->
+                <h1 class="title is-3 is-size-4-mobile" style="letter-spacing: -1px">Get a professional website to showcase your business and services, <span class="has-text-success">pay monthly.</span></h1>
                 <p>Our goal isn’t to just make great websites that your customers will love you for, but to create an experience that they will remember and ultimately drive sales.</p>
-                <!-- <p>Once we achieve this, awesome websites just comes naturally.</p> -->
                 <p>
-                    <a href="/pricing" class="button is-outlined is-link">
+                    <a href="/pricing?utm_source=landing_page&utm_medium=pricing_link_click&utm_campaign=landing_page_optimization" class="button is-outlined is-link">
                         <span>View Pricing</span>
                         <span class="icon is-small"> <i class="fa fa-arrow-right"></i></span>
                     </a>
@@ -108,7 +110,7 @@
     </div>
 </div>
 
-<div class="hero is-medium">
+<div class="hero">
     <div class="hero-body">
         <div class="container">
             @include('includes.pricing', ['use_title' => true])
@@ -122,37 +124,6 @@
 
 @include('includes.works')
 
-<div class="hero">
-    <div class="hero-body">
-        <div class="container">
-            <div class="columns is-centered">
-                <div class="column is-two-thirds has-text-centered">
-                    <h2 class="title is-4 pointing-header"><i class="fa fa-comments"></i> What our customers say</h2>
-                    <div class="testimonials">
-                        <div>
-                            <p>I find the developers at Webdesk.ng very professional and committed to delivering quality service to their customers.  Their attention to detail and understanding of what the client needs a refreshing change to my past experience with website developers.  I would definitely recommend Webdesk.ng to my friends</p>
-                            <h4 class="title is-4 text-is-uppercase">Kolawole Olarewaju</h4> 
-                            <h5 class="subtitle">Founder, Komotion Studios</h5>                   
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- <div class="hero is-light">
-    <div class="hero-body">
-        <div class="columns is-centered">
-            <div class="column is-two-thirds">
-                <h2 class="title is-4">Got Questions? These might help.</h2>
-                <dl>
-                    <dt></dt>
-                    <dd></dd>
-                </dl>
-            </div>
-        </div>
-    </div>
-</div> -->
+@include('includes.reviews')
 
 @endsection

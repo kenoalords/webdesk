@@ -26,6 +26,7 @@ class AddSubscriptionRequest extends FormRequest
         return [
             'package'   => 'required|exists:packages,id',
             'domain'    => 'required|url',
+            'renew_interval'    => 'required|in:1,6,12'
         ];
     }
 }

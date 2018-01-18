@@ -9,7 +9,7 @@
                 <div class="column is-two-thirds">
                     <div class="columns is-gapless">
                         <div class="column">
-                            <div class="card">
+                            <div class="card basic">
                                 <div class="card-content">
                                     <h2 class="title">Basic</h2>
                                     <h4 class="subtitle has-text-success naira">{{ number_format($packages[0]->monthly_cost) }} Monthly</h4>
@@ -33,7 +33,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <div class="card is-popular">
+                            <div class="card is-popular business">
                                 <div class="card-content">
                                     <h2 class="title">Business</h2>
                                     <h4 class="subtitle has-text-success naira">{{ number_format($packages[1]->monthly_cost) }} Monthly</h4>
@@ -62,7 +62,7 @@
                             </div>
                         </div>
                         <div class="column">
-                            <div class="card">
+                            <div class="card pro">
                                 <div class="card-content">
                                     <h2 class="title">Pro</h2>
                                     <h4 class="subtitle has-text-success">Call for pricing</h4>
@@ -97,10 +97,10 @@
 
         <div class="container" style="margin-top: 5em">
             <div class="column has-text-centered">
-                <h3 class="title is-2">
+                <h3 class="title is-2 is-size-3-mobile">
                     Not sure which package is ideal for you?
                 </h3>
-                <h4 class="subtitle has-text-grey" style="margin-top: 0em">
+                <h4 class="subtitle is-size-6-mobile has-text-grey" style="margin-top: 0em">
                     Give us a call on <a href="tel:09022422022">090 2242 2022</a> or <a href="/contact" class="has-text-link">click here to contact us</a>
                 </h4>
             </div>

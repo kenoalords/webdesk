@@ -8,9 +8,9 @@
     <div class="container" id="slider-content" style="margin-top: 7em">
         <div class="columns">
             <div class="column is-8 is-offset-2 has-text-centered ">
-                <h1 class="title is-1 has-text-white">Get in touch today</h1>
+                <h1 class="title is-1 is-size-3-mobile has-text-white">Get in touch today</h1>
                 <h4 class="subtitle has-text-white" style="margin-top: .5em">
-                	We are available!
+                	We are ready to discuss your next project.
                 </h4>
             </div>
         </div>
@@ -64,7 +64,7 @@
 							</div>
 							<div class="field">
 								<div class="control">
-									<button type="submit" class="button is-link is-large">
+									<button type="submit" class="button is-link">
 										Submit
 									</button>
 								</div>

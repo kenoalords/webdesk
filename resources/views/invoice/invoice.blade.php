@@ -8,8 +8,8 @@
 			<div class="level-left">
 				<div class="level-item">
 					<div>
-						<a class="navbar-item" href="https://bulma.io">
-		              			<img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+						<a href="/">
+		              			<img src="{{ asset('images/logo-inverse.png') }}" alt="{{ config('app.name') }}" style="width: 140px; height: auto;">
 		              		</a>
 		              		<h4 class="is-5 has-text-grey">Invoice No: {{ $invoice['id'] }}</h4>
 		              </div>
@@ -86,7 +86,7 @@
 					</div>
 				</div>
 			</div>
-			<p class="has-text-grey">Kindly notify us via <a href="mailto:billing@example.com" class="is-link">billing@example.com</a> with your payment details</p>
+			<p class="has-text-grey">Kindly notify us via <a href="mailto:billing@example.com" class="has-text-link">billing@webdesk.ng</a> with your payment details</p>
 		</div>
 	</div>
 </div>

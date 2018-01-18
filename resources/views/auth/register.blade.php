@@ -3,25 +3,19 @@
 @section('content')
 <form class="signup-form" method="POST" action="{{ route('register') }}">
 {{ csrf_field() }}
-<div class="">
-    <div class="hero is-light">
-        <div class="hero-body">
-            <div class="columns">
-                <div class="column is-6 is-offset-3">
-                    <h2 class="title">Setup your account</h2>
-                    @include('dashboard.composers.packages')
-                </div>
-            </div>
-        </div>
-    </div> 
-</div>
 
 <!-- EXTRA ADDONS -->
 <div class="hero">
     <div class="hero-body">
         <div class="columns">
             <div class="column is-6 is-offset-3">
-                <h3 class="title is-5">Domain Name</h3>
+                <a href="/">
+                    <img src="{{ asset('images/logo-inverse.png') }}" alt="{{ config('app.name') }}" style="width: 140px; height: auto; margin-bottom: 2em;">
+                </a>
+                <h2 class="title">Setup your account</h2>
+                @include('dashboard.composers.packages')
+
+                <h3 class="title is-5" style="margin-top: 2em">Domain Name</h3>
                 <p>Please enter a domain name you would like us to register, if you already own this domain check the box below. If this is a new domain, <a href="https://www.godaddy.com/domains/domain-name-search" target="_blank">click here to check its availability</a></p>
                 <div class="field">
                     <input type="url" name="domain" class="input is-large {{ ($errors->has('domain')) ? 'is-danger' : '' }}" value="{{ old('domain') }}" placeholder="e.g www.mydomain.com">
@@ -36,23 +30,30 @@
 
                 <h3 class="title is-5" style="margin-top: 2em">Logo Design + <span class="naira">{{ number_format(config('builder.logo_cost')) }}</span></h3>
                 <label class="checkbox">
-                    <input type="checkbox" name="include_logo" value="1" {{ (old('include_logo') == "1") ? 'checked' : '' }}> Yes I want a new logo
+                    <input type="checkbox" name="include_logo" id="include_logo" data-cost="{{ config('builder.logo_cost') }}" value="1" {{ (old('include_logo') == "1") ? 'checked' : '' }}> Yes I want a new logo
                 </label>
 
                 <h3 class="title is-5" style="margin-top: 2em">How often do you want to renew this package</h3>
                 <div class="control">
                     <div class="select is-medium ">
                         <select name="renew_interval" id="renew_interval" style="width: 100%">
-                            <option value="1">Monthly</option>
-                            <option value="6">Every Six Months</option>
-                            <option value="12">Yearly</option>
+                            <option value="1" {{ (old('renew_interval') == 1) ? 'selected' : '' }} >Monthly</option>
+                            <option value="6" {{ (old('renew_interval') == 6) ? 'selected' : '' }}>Every Six Months</option>
+                            <option value="12" {{ (old('renew_interval') == 12) ? 'selected' : '' }}>Yearly</option>
                         </select>
                     </div>
                 </div>
                 <p class="help">Choose your billing cycle</p>
 
-                <div class="notification is-link is-large" id="total-wrapper">
-                    <h3 class="title">Total: <span class="naira"></span><span class="total-amount">0</span></h3>
+                <div class="field">
+                    <div class="control">
+                        <h3 class="title is-5" style="margin-top: 2em">Tell us briefly about this website.</h3>
+                        <textarea name="notes" id="notes" class="textarea" placeholder="You can also include links of reference website you like">{{ old('notes') }}</textarea>
+                    </div>
+                </div>
+
+                <div class="notification is-primary is-large" id="total-wrapper">
+                    <h3 class="title">Total: <span class="total-amount">0</span></h3>
                 </div>
             </div>
         </div>
@@ -126,8 +127,8 @@
         <div class="columns">
             <div class="column is-6 is-offset-3">
                 @include('includes.terms')
-                <button type="submit" class="button is-primary is-medium is-block">
-                    Sign me up! <span class="naira"></span><span class="total-amount">0</span>
+                <button type="submit" class="button is-link is-large has-text-weight-bold is-block">
+                    Sign me up @ <span class="total-amount">0</span>
                 </button>
             </div>
         </div>

@@ -43,8 +43,12 @@ p{
 	}
 }
 
+.slick-prev:before, .slick-next:before{
+	color: #95a5a6;
+}
+
 #slider {
-	min-height: 640px;
+	min-height: 530px;
 	overflow: hidden;
 	position: relative;
 	top: -54px;
@@ -338,22 +342,25 @@ aside{
 	padding: 0.75rem 2.5rem 0.75rem 1.5rem;
 }
 
-@media screen and (min-width:240px) and (max-width: 480px){
-	#teaser{
-		h1{
-			font-size: 1.5em;
-		}
-	}
+.button.navbar-burger{
+	background: none;
+	color: #fff;
+}
 
-	#slider{
-		figcaption{
-			display: none;
-		}
-	}
+@media screen and (min-width:240px) and (max-width: 480px){
+
 	.is-primary-wrap{
 		.title{
 			font-size: 1.2em;
 		}
+	}
+	#slider {
+		.red-back{
+			width: 110%;
+		}
+	}
+	.basic, .business{
+		margin-bottom: 2em;
 	}
 }
 
@@ -361,11 +368,6 @@ aside{
 	#teaser{
 		h1{
 			font-size: 2em;
-		}
-	}
-	#slider{
-		figcaption{
-			display: none;
 		}
 	}
 }

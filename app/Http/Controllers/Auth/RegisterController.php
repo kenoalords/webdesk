@@ -90,6 +90,7 @@ class RegisterController extends Controller
             'has_domain'    => (isset($data['has_domain'])) ? $data['has_domain'] : 0,
             'domain_name'   => $data['domain'],
             'renew_interval'=> $data['renew_interval'],
+            'notes'         => $data['notes'],
             'include_logo'  => (isset($data['include_logo'])) ? $data['include_logo'] : 0,
         ]);
         $package = (int) $data['package'];
@@ -101,10 +102,28 @@ class RegisterController extends Controller
             $package_details = Package::find($package);
             $package_cost = $package_details->setup_cost + ( ($renew_interval - 1) * $package_details->monthly_cost );
             $total = $package_cost + $logo_cost;
-            $description = '<p>'.$package_details->name . ' @ <span class="naira">' . number_format($package_details->setup_cost).'</span></p>';
+            $description = $package_details->name . ' @ ₦' . number_format($package_details->setup_cost);
+
+            // Format renew interval
+            $interval_description = "";
+            switch($renew_interval){
+                case 1:
+                    $interval_description = 'Monthly renewal';
+                    break;
+                case 6:
+                    $interval_description = "Six months renewal";
+                    break;
+                case 12:
+                    $interval_description = 'Yearly renewal';
+                    break;
+                default:
+                    break;
+            }
+
+            $description .= ' (' . $interval_description . ') <br> ';
 
             if( isset($data['include_logo']) && $data['include_logo']  == "1" ){
-                $description .= '<p>Logo design @ <span class="naira">'.config('builder.logo_cost').'</span></p>';
+                $description .= 'Logo design @ ₦'.config('builder.logo_cost');
             }
 
 
