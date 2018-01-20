@@ -15,7 +15,7 @@ class AdminUserSeeder extends Seeder
         User::create([
         		'fullname'	=> 'Keno Alordiah',
         		'email'		=> 'kenoalords@gmail.com',
-        		'password'	=> bcrypt('mclone'),
+        		'password'	=> bcrypt('!hastalavista1881@'),
         		'username'	=> 'kenoalords',
         		'is_admin'	=> true,
         		'city'		=> 'Ikeja',
