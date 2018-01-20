@@ -24,13 +24,13 @@
         <div id="app">
             <div id="main-header">
                 <div class="container">
-                    <nav class="navbar is-primary is-transparent" role="navigation" aria-label="main navigation">
+                    <nav class="navbar is-primary is-transparent is-fixed-top-mobile" role="navigation" aria-label="main navigation">
                         <div class="navbar-brand">
                             <a class="navbar-item" href="/">
                             <img src="{{ asset('images/logo.png') }}" alt="Webdesk.com.ng Website Management Service in Nigeria" width="112" height="28">
                             </a>
 
-                            <button class="button navbar-burger">
+                            <button class="button navbar-burger" id="home-trigger">
                                 <span></span>
                                 <span></span>
                                 <span></span>
@@ -76,7 +76,7 @@
                         <div class="level-right is-size-7">
                             <ul class="footer-menu has-text-right">
                                 <li><a href="/">Terms of Service</a></li>
-                                <li><a href="/about">Privacy Policy</a></li>
+                                <li><a href="/privacy">Privacy Policy</a></li>
                             </ul>
                         </div>
                     </div>

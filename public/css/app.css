@@ -346,6 +346,57 @@ aside .menu-list a:hover {
 .button.navbar-burger {
   background: none;
   color: #fff;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+#home-trigger.is-active {
+  color: #333;
+  outline: none;
+}
+
+#admin-menu.is-active {
+  display: block !important;
+}
+
+.card.faq {
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.card.faq .card-header:hover {
+  background: #eee;
+}
+
+.card.faq .card-content {
+  display: none;
+}
+
+.card.faq.is-active {
+  background: #2ecc71;
+}
+
+.card.faq.is-active .card-header:hover {
+  background: #2ecc71;
+}
+
+.card.faq.is-active .card-header-title {
+  color: #fff;
+}
+
+.card.faq.is-active .card-header-icon {
+  color: #fff;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.card.faq.is-active .card-content {
+  color: #fff;
+}
+
+.card.is-raised {
+  -webkit-box-shadow: 0 70px 210px -20px rgba(0, 0, 0, 0.2) !important;
+          box-shadow: 0 70px 210px -20px rgba(0, 0, 0, 0.2) !important;
 }
 
 @media screen and (min-width: 240px) and (max-width: 480px) {

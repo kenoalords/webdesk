@@ -1,4 +1,4 @@
-<div class="hero" style="min-height: 93vh">
+<div class="hero" style="min-height: 93vh" >
      <div class="hero-body">
          <div class="menu">
                 @if(Auth::user() && Auth::user()->is_admin == "1")

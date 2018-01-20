@@ -14,7 +14,7 @@
                     </div>
                     
                     @include('includes.notification')
-                    <div class="card">
+                    <div class="card is-raised">
                         <div class="card-content">
                             <h3 class="title is-5">Reset password</h3>
                             <hr>

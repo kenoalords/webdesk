@@ -6,7 +6,7 @@
                     <img src="{{ asset('images/logo.png') }}" alt="Webdesk.com.ng Website Management Service in Nigeria" width="112" height="28">
                 </a>
 
-                <button class="button navbar-burger">
+                <button class="button navbar-burger" id="admin-menu-trigger">
                     <span></span>
                     <span></span>
                     <span></span>

@@ -14,5 +14,6 @@ class DatabaseSeeder extends Seeder
         $this->call(PackageTableSeeder::class);
         $this->call(AdminUserSeeder::class);
         $this->call(ReviewDataSeeder::class);
+        $this->call(FaqDataSeeder::class);
     }
 }

@@ -121,4 +121,16 @@
 
 @include('includes.reviews')
 
+<div class="hero is-light">
+    <div class="hero-body">
+        <div class="columns is-centered">
+            <div class="column is-half">
+                <h2 class="title is-3"><span class="icon"><i class="fa fa-question-circle"></i></span> FAQ</h2>
+                @include('includes.faqs')
+            </div>
+        </div>
+    </div>
+</div>
+
+
 @endsection

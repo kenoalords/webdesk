@@ -174,6 +174,7 @@ return [
          * Package Service Providers...
          */
         Unicodeveloper\Paystack\PaystackServiceProvider::class,
+        // Morrislaptop\LaravelQueueClear\LaravelQueueClearServiceProvider::class,
 
         /*
          * Application Service Providers...

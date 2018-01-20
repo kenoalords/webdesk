@@ -66,7 +66,7 @@ $('.single-slick-js').slick({
 	slidesToShow: 1,
 	slidesToScroll: 1,
 	autoplay: true,
-	autoplaySpeed: 3000,
+	autoplaySpeed: 5000,
 });
 
 if( $('.signup-form').length > 0 ){
@@ -164,6 +164,53 @@ function getMonthlyCost(count, monthlyCost){
 		}
 	return monthly_cost;
 }
+
+$('#users-select').on('change', (e)=>{
+
+	const user_id = parseInt($('#users-select').val());
+	if ( user_id === 0 ) return;
+	// Fetch user subscriptions
+	const data = {user_id: user_id};
+	axios.post('/dashboard/admin/invoices/user/subscription', data).then( (r) => {
+		const s = r.data;
+		const el = $('#users-select-subscription');
+		// console.log(s);
+		for ( let i = 0; i < s.length; i++ ){
+			el.append('<option value="'+s[i].id+'">'+s[i].domain_name+' - '+s[i].package.name+'</option>');
+		}
+	}).catch( (error) => {
+		alert('Something went wrong')
+	});
+});
+
+$('#home-trigger').on('click', (e)=>{
+	e.preventDefault();
+	if ( $('.navbar-menu').hasClass('is-active') ){
+		$('#home-trigger').removeClass('is-active');
+		$('.navbar-menu').removeClass('is-active');
+	} else {
+		$('#home-trigger').addClass('is-active');
+		$('.navbar-menu').addClass('is-active');
+	}
+})
+
+$('#admin-menu-trigger').on('click', (e)=>{
+	e.preventDefault();
+	if ( $('#admin-menu').hasClass('is-active') ){
+		$('#admin-menu-trigger').removeClass('is-active');
+		$('#admin-menu').removeClass('is-active');
+	} else {
+		$('#admin-menu-trigger').addClass('is-active');
+		$('#admin-menu').addClass('is-active');
+	}
+});
+
+$('.card.faq').each(function(index, el) {
+	$(el).find('.card-header').on('click touchstart', (e)=>{
+		$(this).toggleClass('is-active');
+		$(this).find('.card-content').slideToggle('fast');
+	});
+});	
 
 
 

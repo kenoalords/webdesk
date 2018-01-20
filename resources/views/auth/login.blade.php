@@ -4,7 +4,7 @@
 @section('description', 'Log into your account and manage your subscription')
 
 @section('content')
-<div class="hero is-medium is-light">
+<div class="hero is-medium">
     <div class="hero-body">
         <div class="container">
             <div class="columns is-centered">
@@ -17,7 +17,7 @@
                     @include('includes.notification')
                     <form method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
-                        <div class="card">
+                        <div class="card is-raised">
                             <div class="card-content">
                                 <div class="field">
                                     <!-- <label for="email" class="label">E-Mail Address</label> -->

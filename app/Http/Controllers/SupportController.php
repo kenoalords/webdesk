@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Mail;
+use App\Model\Faq;
 use App\Mail\ContactSubmitNotification;
 use App\Transformers\SubscriptionTransformer;
 use Illuminate\Http\Request;
@@ -42,8 +43,9 @@ class SupportController extends Controller
 		}
 	}
 
-	public function faq(Request $req)
+	public function faq(Request $req, Faq $faq)
 	{
-		return view('support.faq');
+		$faqs = $faq->orderBy('weight', 'asc')->get();
+		return view('support.faq')->with('faqs', $faqs);
 	}
 }

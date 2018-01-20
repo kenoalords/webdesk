@@ -14,6 +14,7 @@
 Route::get('/', 'MainController@homepage');
 Route::get('/about', 'MainController@aboutPage');
 Route::get('/pricing', 'MainController@pricingPage');
+Route::get('/privacy', 'MainController@privacy')->name('privacy');
 Route::get('/contact', 'ContactController@getForm')->name('contact_form');
 Route::post('/contact', 'ContactController@submitForm')->name('contact_form');
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
@@ -49,6 +50,9 @@ Route::middleware('auth')->prefix('dashboard')->group(function(){
 	Route::middleware(['auth', 'admin'])->prefix('admin')->group(function(){
 		Route::get('/subscriptions', 'AdminController@subscriptions')->name('subscriptions_admin');
 		Route::get('/invoices', 'AdminController@invoices')->name('invoices_admin');
+		Route::get('/invoices/generate', 'InvoiceController@generateInvoice')->name('generate_invoice');
+		Route::post('/invoices/generate', 'InvoiceController@submitGeneratedInvoice')->name('generate_invoice');
+		Route::post('/invoices/user/subscription', 'InvoiceController@getUserSubscription');
 		Route::get('/faq', 'FaqController@faqAdmin')->name('faq_admin');
 		Route::post('/faq', 'FaqController@submitFAQ')->name('faq_admin');
 		Route::post('/invoice/{invoice}/approve', 'PaymentController@approveInvoice');

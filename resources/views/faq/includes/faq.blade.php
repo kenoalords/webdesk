@@ -1,4 +1,4 @@
-<div class="card" style="margin-top: 1em;">
+<div class="card faq" style="margin-top: 1em;" id="faq-{{ $faq->id }}">
 	<div class="card-header">
 		<h4 class="card-header-title">{{ $faq->title }}</h4>
 		<a href="#" class="card-header-icon" aria-label="more options">

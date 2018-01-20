@@ -32,10 +32,10 @@
         @include('dashboard.composers.admin_header')
 
         <div class="columns is-gapless" style="margin-bottom: 0" id="app">
-            <aside class="column is-2" style="background-color: #f5f5f5">
+            <aside class="column is-2 is-hidden-touch" style="background-color: #f5f5f5" id="admin-menu">
                 @include('dashboard.includes.aside')
             </aside>
-            <div class="column is-10">
+            <div class="column is-10 is-flex-touch">
                 <div class="hero ">
                     <div class="hero-body is-paddingless">
                         @yield('content')

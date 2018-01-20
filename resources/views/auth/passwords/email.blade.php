@@ -10,7 +10,7 @@
             <div class="column is-one-quarter">
                 <h3 class="title is-5 has-text-centered">Reset Password</h3>
                 @include('includes.notification')
-                <div class="card">
+                <div class="card is-raised">
                     <div class="card-content">
                         <form method="POST" action="{{ route('password.email') }}">
                             {{ csrf_field() }}
