@@ -40,7 +40,7 @@
                                 <div class="field">
                                     <div class="control">
                                         <label class="checkbox">
-                                            <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
+                                            <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }} class="is-toggle"> Remember Me
                                         </label>
                                     </div>
                                 </div>
@@ -67,7 +67,7 @@
                             </p>
                             
                             <a href="/register" class="control">Register</a>
-                            <a href="#" class="control">Need Help?</a>
+                            <a href="/contact" class="control">Need Help?</a>
                         </div>
                     </div>
                 </div>

@@ -12,9 +12,13 @@
     <div class="hero-body">
         <div class="columns">
             <div class="column is-6 is-offset-3">
-                <a href="/">
-                    <img src="{{ asset('images/logo-inverse.png') }}" alt="{{ config('app.name') }}" style="width: 140px; height: auto; margin-bottom: 2em;">
-                </a>
+                <p class="has-text-centered">
+                    <a href="/">
+                        <img src="{{ asset('images/logo-inverse.png') }}" alt="{{ config('app.name') }}" style="width: 140px; height: auto; margin-bottom: 2em;">
+                    </a>
+                </p>
+                
+                <hr>
                 <h2 class="title">Setup your account</h2>
                 @include('dashboard.composers.packages')
 
@@ -27,13 +31,13 @@
                     @endif
                 </div>
                 <label class="checkbox">
-                    <input type="checkbox" name="has_domain" value="1" {{ (old('has_domain') == "1") ? 'checked' : '' }}>
+                    <input type="checkbox" name="has_domain" value="1" {{ (old('has_domain') == "1") ? 'checked' : '' }} class="is-toggle">
                     I have registered this domain
                 </label>
 
                 <h3 class="title is-5" style="margin-top: 2em">Logo Design + <span class="naira">{{ number_format(config('builder.logo_cost')) }}</span></h3>
                 <label class="checkbox">
-                    <input type="checkbox" name="include_logo" id="include_logo" data-cost="{{ config('builder.logo_cost') }}" value="1" {{ (old('include_logo') == "1") ? 'checked' : '' }}> Yes I want a new logo
+                    <input type="checkbox" name="include_logo" id="include_logo" data-cost="{{ config('builder.logo_cost') }}" value="1" {{ (old('include_logo') == "1") ? 'checked' : '' }} class="is-toggle"> Yes I want a new logo
                 </label>
 
                 <h3 class="title is-5" style="margin-top: 2em">How often do you want to renew this package</h3>
@@ -55,7 +59,7 @@
                     </div>
                 </div>
 
-                <div class="notification is-primary is-large" id="total-wrapper">
+                <div class="notification is-primary is-large is-raised" id="total-wrapper">
                     <h3 class="title">Total: <span class="total-amount">0</span></h3>
                 </div>
             </div>
@@ -130,7 +134,7 @@
         <div class="columns">
             <div class="column is-6 is-offset-3">
                 @include('includes.terms')
-                <button type="submit" class="button is-link is-large has-text-weight-bold is-block">
+                <button type="submit" class="button is-link is-large has-text-weight-bold is-block is-raised">
                     Sign me up @ <span class="total-amount">0</span>
                 </button>
             </div>
