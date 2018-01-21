@@ -15,15 +15,15 @@ class PackageTableSeeder extends Seeder
         	$packages = [
         		'basic'	=> [
         			'name'		=> 'Basic Package',
-        			'features'	=> 'Up to 5 pages',
-        			'monthly_cost'	=> 3500,
-        			'setup_cost'	=> 10000
+        			'features'	=> 'Up to 10 pages',
+        			'monthly_cost'	=> 5000,
+        			'setup_cost'	=> 15000
         		],
         		'business'	=> [
         			'name'		=> 'Business Package',
-        			'features'	=> 'Up to 15 pages',
-        			'monthly_cost'	=> 5000,
-        			'setup_cost'	=> 15000
+        			'features'	=> 'Up to 25 pages',
+        			'monthly_cost'	=> 6500,
+        			'setup_cost'	=> 25000
         		],
         	];
 

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title', 'Website Design Pricing | ')
-@section('description', 'Own a professional website for as low as ₦3,500/Monthly. You also get SEO Optimization, Graphics design and Online marketing solutions. Sign up today')
+@section('description', 'Own a professional website for as low as ₦4,999/Monthly. You also get SEO Optimization, Graphics design and Online marketing solutions. Sign up today')
 
 @section('content')
 

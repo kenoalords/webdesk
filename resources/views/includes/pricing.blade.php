@@ -17,10 +17,10 @@
                                 <ul class="is-option-list">
                                     <li class="is-primary"><h4 class="naira">{{ number_format($packages[0]->setup_cost) }} Setup Cost</h4></li>
                                     <li>Bespoke Design</li>
-                                    <li class="has-text-weight-bold">Up to 5 Pages</li>
+                                    <li class="has-text-weight-bold">Up to 15 Pages</li>
                                     <li>Free Domain Name (.com &amp; .com.ng)</li>
                                     <li>Free Website Hosting</li>
-                                    <li>5 Email Addresses</li>
+                                    <li>25 Email Addresses</li>
                                     <li>Mobile Optimized</li>
                                     <li>SEO Friendly</li>
                                     <li>Contact Form</li>
@@ -28,7 +28,7 @@
                                     <li>Quaterly Scheduled Maintenance</li>
                                 </ul>
                                 <div class="card-footer">
-                                    <a href="/register?type=1" class="card-footer-item button is-success is-large no-border-radius has-text-weight-bold">I want this plan</a>
+                                    <a href="/register?type=1" class="card-footer-item button is-success is-large no-border-radius has-text-weight-bold is-raised">I want this plan</a>
                                 </div>
                             </div>
                         </div>
@@ -41,10 +41,10 @@
                                 <ul class="is-option-list">
                                     <li><h4 class="naira">{{ number_format($packages[1]->setup_cost) }} Setup Cost</h4></li>
                                     <li>Bespoke Design</li>
-                                    <li class="has-text-weight-bold">Up to 15 Pages</li>
+                                    <li class="has-text-weight-bold">Up to 25 Pages</li>
                                     <li>Free Domain Name (.com &amp; .com.ng)</li>
                                     <li>Free Website Hosting</li>
-                                    <li>10 Email Addresses</li>
+                                    <li>50 Email Addresses</li>
                                     <li>Mobile Optimized</li>
                                     <li>SEO Friendly</li>
                                     <li>Custom Contact Form</li>
@@ -57,9 +57,10 @@
                                     <li>Blog</li>
                                 </ul>
                                 <div class="card-footer">
-                                    <a href="/register?type=2" class="card-footer-item button is-link is-large no-border-radius has-text-weight-bold">I want this plan</a>
+                                    <a href="/register?type=2" class="card-footer-item button is-link is-large no-border-radius has-text-weight-bold is-raised">I want this plan</a>
                                 </div>
                             </div>
+
                         </div>
                         <div class="column">
                             <div class="card pro">
@@ -85,7 +86,7 @@
                                     <li>Blog</li>
                                 </ul>
                                 <div class="card-footer">
-                                    <a href="/contact" class="card-footer-item button is-primary is-large no-border-radius has-text-weight-bold">Contact us</a>
+                                    <a href="/contact" class="card-footer-item button is-primary is-large no-border-radius has-text-weight-bold is-raised">Contact us</a>
                                 </div>
                             </div>
                         </div>

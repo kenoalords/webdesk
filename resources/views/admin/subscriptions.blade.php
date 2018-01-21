@@ -9,6 +9,8 @@
 		@if( count($subscriptions) > 0 )
 			@each('dashboard.includes.subscription', $subscriptions, 'sub')
 		@endif
+
+		<subscription-modal :active="isActive" :id="subid" @close="closeModal"></subscription-modal>
 	</div>
 </div>
 

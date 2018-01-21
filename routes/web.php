@@ -49,6 +49,7 @@ Route::middleware('auth')->prefix('dashboard')->group(function(){
 
 	Route::middleware(['auth', 'admin'])->prefix('admin')->group(function(){
 		Route::get('/subscriptions', 'AdminController@subscriptions')->name('subscriptions_admin');
+		Route::post('/subscriptions/update', 'AdminController@updateSubscription');
 		Route::get('/invoices', 'AdminController@invoices')->name('invoices_admin');
 		Route::get('/invoices/generate', 'InvoiceController@generateInvoice')->name('generate_invoice');
 		Route::post('/invoices/generate', 'InvoiceController@submitGeneratedInvoice')->name('generate_invoice');

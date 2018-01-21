@@ -20,11 +20,12 @@
 				</div>
 			</div>
 			<progress class="progress is-success" max="100" value="{{ $sub['progress'] }}"></progress>
+			@if(Auth::user()->is_admin === 1)
+				<update-subscription v-bind:subid="{{ $sub['id'] }}" key="{{ $sub['id'] }}" v-on:modal="showModal($event)"></update-subscription>
+			@endif
 			<span class="tag is-info">Website progress - {{ $sub['progress'] }}%</span>
 			<span class="tag is-white has-text-weight-bold"><span class="icon has-text-primary"><i class="fa fa-info-circle"></i></span> {{ $sub['progress_description'] }}</span>
 		</div>
 	</div>
-	<div class="card-footer">
-		
-	</div>
+	
 </div>

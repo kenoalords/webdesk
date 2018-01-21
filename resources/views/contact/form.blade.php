@@ -64,7 +64,7 @@
 							</div>
 							<div class="field">
 								<div class="control">
-									<button type="submit" class="button is-link">
+									<button type="submit" class="button is-raised is-block is-link">
 										Submit
 									</button>
 								</div>

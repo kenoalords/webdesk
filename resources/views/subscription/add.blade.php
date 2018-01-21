@@ -27,13 +27,13 @@
 			@endif
 			<p style="margin-top: 1em">
 				<label class="checkbox">
-		               <input type="checkbox" name="has_domain" value="1" {{ (old('has_domain') == "1") ? 'checked' : '' }}>
+		               <input type="checkbox" name="has_domain" value="1" {{ (old('has_domain') == "1") ? 'checked' : '' }} class="is-toggle">
 		               I have registered this domain
 		          </label>
 	          </p>
 	          <h3 class="title is-5" style="margin-top: 2em">Logo Design + <span class="naira">{{ number_format(config('builder.logo_cost')) }}</span></h3>
                <label class="checkbox">
-                    <input type="checkbox" name="include_logo" value="1" {{ (old('include_logo') == "1") ? 'checked' : '' }}> Yes I want a new logo with this package
+                    <input type="checkbox" name="include_logo" value="1" {{ (old('include_logo') == "1") ? 'checked' : '' }} class="is-toggle"> Yes I want a new logo with this package
                </label>
 		</div>
 		<h3 class="title is-5" style="margin-top: 2em">How often do you want to renew this package</h3>
@@ -63,7 +63,7 @@
 	</div>
 	<div class="field">
 		<div class="control">
-			<button type="submit" class="button is-link is-medium">
+			<button type="submit" class="button is-link is-medium is-block is-raised">
 				Order Package
 			</button>
 		</div>

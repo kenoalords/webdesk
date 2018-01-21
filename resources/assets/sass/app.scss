@@ -397,13 +397,13 @@ aside{
 }
 
 .is-raised{
-	box-shadow: 0 30px 60px -10px rgba(0,0,0,.3);
+	box-shadow: 0 10px 60px -8px rgba(0, 0, 0, 0.8);
 	&.button{
 		transition: all .3s ease-out;
 		transform: translateY(0);
 		&:hover{
 			transform: translateY(-5px);
-			box-shadow: 0 50px 60px -10px rgba(0,0,0,.2);
+			box-shadow: 0 30px 60px -10px rgba(0,0,0,.2);
 		}
 	}
 }

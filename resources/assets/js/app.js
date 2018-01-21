@@ -16,9 +16,27 @@ window.Vue = require('vue');
  */
 
 Vue.component('approve-payment', require('./components/ApprovePayment.vue'));
+Vue.component('update-subscription', require('./components/UpdateSubscription.vue'));
+Vue.component('subscription-modal', require('./components/SubscriptionModal.vue'));
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    data(){
+    		return {
+    			isActive: false,
+    			subid: null,
+    		}
+    },
+    methods: {
+    		showModal(e){
+    			this.isActive = e.show;
+    			this.subid = e.id;
+    		},
+    		closeModal(e){
+    			this.isActive = false;
+    			this.subid = null;
+    		}
+    }
 });
 
 Number.prototype.formatMoney = function(places, symbol, thousand, decimal) {
@@ -89,7 +107,7 @@ if( $('.signup-form').length > 0 ){
 			if ( hasLogo ){
 				total += logoCost;
 			}
-			$('.total-amount').html(total.formatMoney());
+			$('.total-amount').html(total.toLocaleString('en-US'));
 		});		
 	}).bind(packageCost, monthlyCost, total, hasLogo, logoCost);	
 
@@ -102,7 +120,8 @@ if( $('.signup-form').length > 0 ){
 		if ( hasLogo ){
 			total += logoCost;
 		}
-		$('.total-amount').html(total.formatMoney()); 
+		$('.total-amount').html(total.toLocaleString('en-US')); 
+		// $('.total-amount-description').html('(Setup Cost + ' + count - 1  + ' Months)');
 	}).bind(packageCost, monthlyCost, total, hasLogo, logoCost);
 
 	$('#include_logo').on('change', (e)=>{
@@ -110,16 +129,16 @@ if( $('.signup-form').length > 0 ){
 		if ( document.querySelector('#include_logo').checked ) {
 			total += cost;
 			hasLogo = true;
-			$('.total-amount').html(total.formatMoney());
+			$('.total-amount').html(total.toLocaleString('en-US'));
 		} else {
 			total -= cost;
 			hasLogo = false;
-			$('.total-amount').html(total.formatMoney());
+			$('.total-amount').html(total.toLocaleString('en-US'));
 		}
 		// const count = parseInt($('#renew_interval').val());
 		// let monthly_cost = getMonthlyCost(count, monthlyCost);		
 		// const total = packageCost + monthly_cost;
-		// $('.total-amount').html(total.formatMoney()); 
+		// $('.total-amount').html(total.toLocaleString('en-US')); 
 	}).bind(packageCost, monthlyCost, total, hasLogo, logoCost);
 
 	// console.log($('#packages').val())
@@ -153,10 +172,10 @@ function getMonthlyCost(count, monthlyCost){
 	let monthly_cost = 0;
 	switch (count) {
 			case 12:
-				monthly_cost = monthlyCost * 11;
+				monthly_cost = (monthlyCost * 11) - ((monthlyCost * 11) * 0.1);
 				break;
 			case 6:
-				monthly_cost = monthlyCost * 5;
+				monthly_cost = (monthlyCost * 5) - ((monthlyCost * 5) * 0.05);
 				break;
 			default:
 				monthly_cost = 0;
@@ -207,6 +226,7 @@ $('#admin-menu-trigger').on('click', (e)=>{
 
 $('.card.faq').each(function(index, el) {
 	$(el).find('.card-header').on('click touchstart', (e)=>{
+		e.preventDefault();
 		$(this).toggleClass('is-active');
 		$(this).find('.card-content').slideToggle('fast');
 	});

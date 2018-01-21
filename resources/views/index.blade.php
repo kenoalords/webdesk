@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title', 'Professional website designers in Lagos | ')
-@section('description', 'Own a professional website for as low as ₦3,500/Monthly. You also get SEO Optimization, Graphics design and Online marketing solutions. Sign up today')
+@section('description', 'Own a professional website for as low as ₦4,999/Monthly. You also get SEO Optimization, Graphics design and Online marketing solutions. Sign up today')
 
 @section('content')
 
@@ -19,7 +19,7 @@
                                 <h1 class="title is-1 has-text-white is-size-3-mobile">
                                     Let us build and manage your dream website
                                 </h1>
-                                <p><a href="/register" class="button is-outlined is-white"><span>Get started</span> <span class="icon"><i class="fa fa-arrow-right"></i></span></a></p>
+                                <p><a href="/register" class="button is-raised is-white"><span>Sign up today</span> <span class="icon"><i class="fa fa-arrow-right"></i></span></a></p>
                             </div>
                             <div class="column is-6">
                                 <figure class="image">
@@ -41,7 +41,7 @@
                 <h1 class="title is-3 is-size-4-mobile" style="letter-spacing: -1px">Get a professional website to showcase your business and services, <span class="has-text-success">pay monthly.</span></h1>
                 <p>Our goal isn’t to just make great websites that your customers will love you for, but to create an experience that they will remember and ultimately drive sales.</p>
                 <p>
-                    <a href="/pricing?utm_source=landing_page&utm_medium=pricing_link_click&utm_campaign=landing_page_optimization" class="button is-outlined is-link">
+                    <a href="/pricing?utm_source=landing_page&utm_medium=pricing_link_click&utm_campaign=landing_page_optimization" class="button is-raised is-link">
                         <span>View Pricing</span>
                         <span class="icon is-small"> <i class="fa fa-arrow-right"></i></span>
                     </a>

@@ -2,6 +2,6 @@
 
 return [
 
-	'logo_cost'	=> 7500
+	'logo_cost'	=> 15000
 
 ];

@@ -1,7 +1,7 @@
 @extends('layouts.account')
 
 @section('title', 'Sign up | ')
-@section('description', 'Sign up and get a professional bespoke website for as low as ₦3,500/Monthly.')
+@section('description', 'Sign up and get a professional bespoke website for as low as ₦4,999/Monthly.')
 
 @section('content')
 <form class="signup-form" method="POST" action="{{ route('register') }}">
@@ -45,8 +45,8 @@
                     <div class="select is-medium ">
                         <select name="renew_interval" id="renew_interval" style="width: 100%">
                             <option value="1" {{ (old('renew_interval') == 1) ? 'selected' : '' }} >Monthly</option>
-                            <option value="6" {{ (old('renew_interval') == 6) ? 'selected' : '' }}>Every Six Months</option>
-                            <option value="12" {{ (old('renew_interval') == 12) ? 'selected' : '' }}>Yearly</option>
+                            <option value="6" {{ (old('renew_interval') == 6) ? 'selected' : '' }}>Every Six Months - 5% Discount</option>
+                            <option value="12" {{ (old('renew_interval') == 12) ? 'selected' : '' }}>Yearly - 10% Discount</option>
                         </select>
                     </div>
                 </div>
@@ -60,7 +60,8 @@
                 </div>
 
                 <div class="notification is-primary is-large is-raised" id="total-wrapper">
-                    <h3 class="title">Total: <span class="total-amount">0</span></h3>
+                    <h3 class="title is-4">₦<span class="total-amount">0</span> <span class="total-amount-description"></span></h3>
+                    
                 </div>
             </div>
         </div>
@@ -135,7 +136,7 @@
             <div class="column is-6 is-offset-3">
                 @include('includes.terms')
                 <button type="submit" class="button is-link is-large has-text-weight-bold is-block is-raised">
-                    Sign me up @ <span class="total-amount">0</span>
+                    Sign me up @ ₦<span class="total-amount">0</span>
                 </button>
             </div>
         </div>

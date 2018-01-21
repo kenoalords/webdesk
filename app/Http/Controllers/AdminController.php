@@ -2,12 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use Mail;
 use App\Model\Subscription;
 use App\Model\Invoice;
+use App\Model\User;
 use Illuminate\Http\Request;
 use App\Traits\Orderable;
 use App\Transformers\SubscriptionTransformer;
 use App\Transformers\InvoiceTransformer;
+use App\Mail\SubscriptionUpdateNotification;
 
 class AdminController extends Controller
 {
@@ -41,5 +44,16 @@ class AdminController extends Controller
 			'unpaid_invoices' 	=> $unpaid_invoices,
 			'paid_invoices' 	=> $paid_invoices,
 		]);
+	}
+
+	public function updateSubscription(Request $request, Subscription $sub, User $user)
+	{
+		$subscription = $sub->find($request->id);
+		$subscription->progress = (int)$request->percentage;
+		$subscription->progress_description = $request->message;
+		$subscription->save();
+		$user = $user->find($subscription->user_id);
+		Mail::to($user)->send(new SubscriptionUpdateNotification($subscription->id));
+		return response()->json(true, 200);
 	}
 }
