@@ -396,6 +396,10 @@ aside{
 	box-shadow: 0 70px 210px -20px rgba(0, 0, 0, 0.2) !important;
 }
 
+.is-rounded{
+	border-radius: 2400px !important;
+}
+
 .is-raised{
 	box-shadow: 0 10px 60px -8px rgba(0, 0, 0, 0.8);
 	&.button{

@@ -11414,7 +11414,6 @@ var app = new Vue({
 
 	methods: {
 		showModal: function showModal(e) {
-			console.log(e);
 			this.isActive = e.show;
 			this.subid = e.id;
 		},

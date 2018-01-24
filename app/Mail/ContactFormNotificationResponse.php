@@ -31,7 +31,7 @@ class ContactFormNotificationResponse extends Mailable implements ShouldQueue
      */
     public function build()
     {
-        return $this->subject("Thank you for contacting us")
+        return $this->subject(ucwords(strtolower($this->fullname)) . ", thank you for contacting us")
                     ->markdown('email.contact_form_notification_response')
                     ->with('fullname', $this->fullname);
     }

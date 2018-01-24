@@ -39,7 +39,7 @@ class ContactFormNotification extends Mailable implements ShouldQueue
      */
     public function build()
     {
-        return $this->subject('New pubic contact from enquiry from ' . $this->fullname)
+        return $this->subject('Contact Enquiry: ' . $this->fullname)
                     ->markdown('email.contact_form_notification')
                     ->with([
                         'fullname'  => $this->fullname,

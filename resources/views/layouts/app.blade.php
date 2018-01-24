@@ -27,7 +27,7 @@
                     <nav class="navbar is-primary is-transparent is-fixed-top-mobile" role="navigation" aria-label="main navigation">
                         <div class="navbar-brand">
                             <a class="navbar-item" href="/">
-                            <img src="{{ asset('images/logo.png') }}" alt="Webdesk.com.ng Website Management Service in Nigeria" width="112" height="28">
+                            <img src="{{ asset('images/logo.png') }}" alt="Webdesk.com.ng Website Management Service in Nigeria" style="width: 140px; height: auto" >
                             </a>
 
                             <button class="button navbar-burger" id="home-trigger">
@@ -42,9 +42,12 @@
                             <a href="/pricing" class="navbar-item {{ (Request::path() == '/pricing') ? 'is-active' : '' }}">Pricing</a>
                             <a href="/contact" class="navbar-item">Contact</a>
                             <div class="navbar-item">
-                                <a href="/login" class="button is-danger is-rounded" style="border-width: 2px; font-weight: 800">Client Login</a>
+                            <a href="/login" class="button is-info" style="padding-right: 2em; padding-left: 2em">
+                                    <span class="icon"><i class="fa fa-lock"></i></span>
+                                    <span>Client login</span>
+                            </a>
                             </div>
-                            <div class="navbar-item"></div>
+                            <!-- <div class="navbar-item"></div> -->
                         </div> <!-- Navbar menu -->
                     </nav>
                 </div>

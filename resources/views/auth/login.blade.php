@@ -11,7 +11,7 @@
                 <div class="column is-one-third">
                     <div class="has-text-centered" style="margin-bottom: 2em;">
                         <a href="/login">
-                            <img src="{{ asset('images/logo-inverse.png') }}" alt="Webdesk.ng" style="width: 120px; height: auto;">
+                            <img src="{{ asset('images/logo-inverse.png') }}" alt="Webdesk.ng" style="width: 180px; height: auto;">
                         </a>
                     </div>
                     @include('includes.notification')
