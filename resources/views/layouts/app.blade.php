@@ -14,7 +14,15 @@
         <link rel="icon" href="{{ asset('favicon.png') }}" type="image/png">
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
+        <script>
+            window.Laravel  = {!! json_encode([
+                'csrfToken'     => csrf_token(),
+                'url'           => config('app.url'),
+                'userLoggedIn'  => (Auth::user()) ? true : false,
+                'user_id'       => (Auth::user()) ? Auth::user()->id : 0,
+                'is_admin'      => (Auth::user() && Auth::user()->is_admin) ? Auth::user()->id : 0,
+            ]) !!};
+        </script>
         <!-- Styles -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
         <link rel="stylesheet" href="{{ asset('css/default.css') }}">
@@ -22,6 +30,7 @@
     </head>
     <body>
         <div id="app">
+            <email-popup></email-popup>
             <div id="main-header">
                 <div class="container">
                     <nav class="navbar is-primary is-transparent is-fixed-top-mobile" role="navigation" aria-label="main navigation">
@@ -101,6 +110,8 @@
             gtag('js', new Date());
             gtag('config', 'UA-112666247-1');
         </script>
+        
+        
 
     </body>
 </html>

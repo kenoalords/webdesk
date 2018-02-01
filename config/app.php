@@ -174,6 +174,7 @@ return [
          * Package Service Providers...
          */
         Unicodeveloper\Paystack\PaystackServiceProvider::class,
+        \Torann\GeoIP\GeoIPServiceProvider::class,
         // Morrislaptop\LaravelQueueClear\LaravelQueueClearServiceProvider::class,
 
         /*
@@ -235,6 +236,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Paystack' => Unicodeveloper\Paystack\Facades\Paystack::class,
+        'GeoIP' => \Torann\GeoIP\Facades\GeoIP::class,
     ],
 
 ];

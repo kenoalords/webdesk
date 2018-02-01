@@ -474,6 +474,46 @@ input[type="checkbox"].is-toggle:checked:after {
   left: calc(100% - 1.5em);
 }
 
+#email-popup .modal-content {
+  -webkit-box-shadow: 0 10px 60px -6px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 60px -6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  max-width: 480px;
+}
+
+#email-popup .modal-content .card-content {
+  padding: 3em;
+}
+
+#email-popup .modal-content .card-content img {
+  margin: 0 auto 1em auto;
+}
+
+#email-popup .modal-content .card {
+  border-radius: 10px;
+}
+
+#email-popup .modal-close {
+  background-color: #333;
+}
+
+.modal-background.custom {
+  background-color: #fff;
+}
+
+.modal-background.custom:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 150vh;
+  -webkit-transform: rotate(15deg) translateY(-10vh) translateX(-55vw);
+          transform: rotate(15deg) translateY(-10vh) translateX(-55vw);
+  background: #209cee;
+}
+
 @media screen and (min-width: 240px) and (max-width: 480px) {
   .is-primary-wrap .title {
     font-size: 1.2em;

@@ -19,6 +19,8 @@ Route::get('/contact', 'ContactController@getForm')->name('contact_form');
 Route::post('/contact', 'ContactController@submitForm')->name('contact_form');
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
+Route::post('/subscribe', 'EmailSubscriptionController@subscribe');
+
 Auth::routes();
 
 Route::get('/package/{package}', 'PackageController@getPackage');

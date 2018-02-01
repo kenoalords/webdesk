@@ -14,10 +14,12 @@ window.Vue = require('vue');
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-
+import VeeValidate from 'vee-validate';
+Vue.use(VeeValidate);
 Vue.component('approve-payment', require('./components/ApprovePayment.vue'));
 Vue.component('update-subscription', require('./components/UpdateSubscription.vue'));
 Vue.component('subscription-modal', require('./components/SubscriptionModal.vue'));
+Vue.component('email-popup', require('./components/EmailPopup.vue'));
 
 const app = new Vue({
     el: '#app',
