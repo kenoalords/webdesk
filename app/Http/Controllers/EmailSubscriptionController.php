@@ -16,13 +16,13 @@ class EmailSubscriptionController extends Controller
     		if ( $check->count() > 0 ){
     			return response()->json(true, 200);
     		}
-    		$ip = geoip($request->ip());
+    		$ip = geoip()->getLocation($request->ip());
     		$subscribe = $emailSubcription->create([
     					'email'	=> strtolower($request->email),
-    					'ip'		=> $request->ip(),
+    					'ip'	=> $request->ip(),
     					'city'	=> $ip->city,
     					'state'	=> $ip->state_name,
-    					'country'	=> $ip->country,
+    					'country'=> $ip->country,
     					'iso_code'=> $ip->iso_code,
     				]);
     		if($subscribe){
