@@ -11,6 +11,8 @@ use App\Traits\Orderable;
 use App\Transformers\SubscriptionTransformer;
 use App\Transformers\InvoiceTransformer;
 use App\Mail\SubscriptionUpdateNotification;
+use GuzzleHttp\Exception\GuzzleException;
+use GuzzleHttp\Client;
 
 class AdminController extends Controller
 {
@@ -56,4 +58,28 @@ class AdminController extends Controller
 		Mail::to($user)->send(new SubscriptionUpdateNotification($subscription->id));
 		return response()->json(true, 200);
 	}
+
+	public function manageSubscription(Request $request, Subscription $subscription)
+	{
+		$sub = $subscription->find($request->id);
+		$domain = $sub->domain_name;
+		if ( (bool)$request->active ===  false ){
+			$sub->is_active = 1;
+			$sub->save();
+			$api_route = $domain . '/wp-json/webdesk/v1/subscription/activate';
+			return response()->json([ 'route' => $api_route, 'isActive' => 1, 'accessToken' => $sub->access_token ], 200);
+		} else {
+			$sub->is_active = 0;
+			$sub->save();
+			$api_route = $domain . '/wp-json/webdesk/v1/subscription/deactivate';
+			return response()->json([ 'route' => $api_route, 'isActive' => 0, 'accessToken' => $sub->access_token ], 200);
+		}	
+		return response()->json(false, 422);	
+	}
 }
+
+
+
+
+
+

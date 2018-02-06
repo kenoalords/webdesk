@@ -92,6 +92,7 @@ class RegisterController extends Controller
             'renew_interval'=> $data['renew_interval'],
             'notes'         => $data['notes'],
             'include_logo'  => (isset($data['include_logo'])) ? $data['include_logo'] : 0,
+            'access_token'  => time().'.'.strtoupper(uniqid(true)).'.'.parse_url($data['domain'], PHP_URL_HOST),
         ]);
         $package = (int) $data['package'];
         $logo_default_cost = (int)config('builder.logo_cost');
@@ -137,7 +138,6 @@ class RegisterController extends Controller
             Mail::to($user)->bcc(config('app.email'))->send(new SubscriptionNotification($invoice->id));
             $this->invoice = $invoice->id;
         }
-
         return $user;
     }
 }

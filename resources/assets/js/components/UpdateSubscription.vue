@@ -1,6 +1,6 @@
 <template>
     <span>
-        <button class="is-link button is-small" @click.prevent="updateSubscription()">Update subscription</button>
+        <a href="#" class="is-link button is-small" @click.prevent="updateSubscription()">Update subscription</a>
     </span>
 </template>
 

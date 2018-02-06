@@ -1,35 +1,57 @@
 <template>
-    <div class="modal" :class="{'is-active' : isActive}" id="email-popup">
-        <div class="modal-background custom"></div>
-        <div class="modal-content">
-            <div class="card">
-                <div class="card-content has-text-centered">
-                    <div v-if="!isSubmitted">
-                        <img :src="iconUrl" alt="Email popup" class="image is-64x64 is-centered">
-                        <h3 class="title is-marginless">Stay up to date</h3>
-                        <p>Get our latest discounts and promotions in your inbox</p>
-                        <div class="field">
-                            <div class="control">
-                                <input type="email" v-model="email" id="email" placeholder="Email address" class="input" @keyup="checkEmailLength" v-validate.initial="email" data-vv-rules="required|email" :class="{'is-danger': errors.has('email')}">
-                            </div>
+    <div>
+        <transition name="drop">
+            <div class="modal is-active" v-if="isActive" id="email-popup">
+                <div class="modal-background custom"></div>
+                <div class="modal-content">
+                    <div class="card">
+                        <div class="card-content has-text-centered">
+                            <div v-if="!isSubmitted">
+                                <img :src="iconUrl" alt="Email popup" class="image is-128x128 is-centered">
+                                <h3 class="title is-marginless">Get a FREE website audit</h3>
+                                <p>Let our experts have a look at your current website and identify areas for improvement, all for <span class="has-text-weight-bold">FREE!</span></p>
+
+                                <div class="field">
+                                    <div class="control">
+                                        <input type="text" v-model="fullname" placeholder="Your Fullname" class="input" v-validate.initial="fullname" data-vv-rules="required|alpha_spaces" :class="{'is-danger': errors.has('fullname')}">
+                                        <p class="help is-danger" v-if="errors.has('fullname')">{{ errors.first('fullname') }}</p>
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <div class="control">
+                                        <input type="email" v-model="email" id="email" placeholder="Your Email Address" class="input" v-validate.initial="email" data-vv-rules="required|email" :class="{'is-danger': errors.has('email')}">
+                                        <p class="help is-danger" v-if="errors.has('email')">{{ errors.first('email') }}</p>
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <div class="control">
+                                        <input type="text" v-model="website" placeholder="Website address" class="input" v-validate.initial="website" data-vv-rules="required|url" :class="{'is-danger': errors.has('website')}">
+                                        <p class="help is-danger" v-if="errors.has('website')">{{ errors.first('website') }}</p>
+                                    </div>
+                                </div>
+
+                                <div class="field">
+                                    <button class="button is-danger is-block is-medium has-text-weight-bold" :disabled="errors.any()" @click="subscribeUser()" :class="{ 'is-loading' : isLoading }">
+                                        <span>Send my FREE report</span>
+                                        <span class="icon"><i class="fa fa-arrow-right"></i></span>
+                                    </button>
+                                </div>
+                                <div class="field">
+                                    <p class="has-text-grey-lighter">100% Privacy. We will not spam you!</p>
+                                </div>
+                            </div> <!-- end of form content -->
+                            <h2 class="title is-5 has-text-success" v-if="isSubmitted">
+                                <span class="icon"><i class="fa fa-check-circle"></i></span>
+                                <span>Your report is on its way!</span>
+                            </h2>
                         </div>
-                        <div class="field">
-                            <button class="button is-info is-block" :disabled="isDisabled" @click="subscribeUser()" :class="{ 'is-loading' : isLoading }">
-                                Subscribe
-                            </button>
-                        </div>
-                        <div class="field">
-                            <p class="has-text-grey-lighter">We do not spam.</p>
-                        </div>
-                    </div> <!-- end of form content -->
-                    <h2 class="title is-5 has-text-success" v-if="isSubmitted">
-                        <span class="icon"><i class="fa fa-check-circle"></i></span>
-                        <span>Thank you for subscribing!</span>
-                    </h2>
+                    </div>
                 </div>
+                <button class="modal-close is-large" aria-label="close" @click.prevent="isActive = false"></button>
             </div>
-        </div>
-        <button class="modal-close is-large" aria-label="close" @click.prevent="isActive = false"></button>
+        </transition>
     </div>
 </template>
 
@@ -37,9 +59,12 @@
     export default {
         data(){
             return{
-                iconUrl: window.Laravel.url + '/images/message-black.svg',
+                iconUrl: window.Laravel.url + '/images/analytics-desktop.svg',
                 isActive: false,
                 email: '',
+                fullname: '',
+                website: 'http://',
+                notes: '',
                 isDisabled: true,
                 isLoading: false,
                 isSubmitted: false,
@@ -48,7 +73,7 @@
 
         methods: {
             checkEmailLength(){
-                if( !this.errors.has('email') ){
+                if( this.errors.errors.length == 0 ){
                     this.isDisabled = false;
                 } else {
                     this.isDisabled = true;
@@ -56,8 +81,14 @@
             },
 
             subscribeUser(){
+                if( this.fullname == '' || this.email == '' || this.website == 'http://' || this.website == '' ){
+                    alert('All fields are required!');
+                    return;
+                }
                 const data = {
-                            email: this.email
+                            email: this.email,
+                            fullname: this.fullname,
+                            website: this.website,
                         },
                     $this = this;
                 $this.isLoading = true;
@@ -67,7 +98,7 @@
                     $this.isSubmitted = true;
                     setTimeout( () => {
                         $this.isActive = false;
-                    }, 2000);
+                    }, 3000);
                     // console.log(res);
                 });
             }
@@ -84,7 +115,8 @@
                     this.isActive = true;
                     sessionStorage.setItem('popup', true);
                 }
-            })
+            });
+            // this.isActive = true;
         }
     }
 </script>

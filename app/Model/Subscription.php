@@ -10,7 +10,7 @@ class Subscription extends Model
     use Orderable;
     
     protected $fillable = [
-    		'package_id', 'has_domain', 'domain_name', 'include_logo', 'is_active', 'expires', 'renew_interval', 'notes'
+    		'package_id', 'has_domain', 'domain_name', 'include_logo', 'is_active', 'expires', 'renew_interval', 'notes', 'access_token'
     ];
 
     protected $dates = [

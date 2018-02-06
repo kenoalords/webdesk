@@ -25,4 +25,18 @@ class MainController extends Controller
     {
         return view('privacy');
     }
+
+    public function audit()
+    {
+        return view('audit');
+    }
+
+    public function auditInitiated(Request $request)
+    {
+        // dd($request->get('status'));
+        if( !$request->get('status') || !in_array($request->get('status'), ['old', 'new']) ){
+            return redirect()->route('audit');
+        }
+        return view('audit_initiated');
+    }
 }

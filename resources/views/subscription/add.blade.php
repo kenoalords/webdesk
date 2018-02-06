@@ -12,7 +12,7 @@
              <span class="help is-danger">{{ $errors->first('package') }}</span>
          @endif
          <p class="help">
-         		Not sure which package suits your needs? <a href="/packages" target="_blank">Click here to view complete description</a>
+         		Not sure which package suits your needs? <a href="/pricing" target="_blank">Click here to view complete description</a>
          </p>
 	</div>
 	<div class="field">

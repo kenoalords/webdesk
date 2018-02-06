@@ -13,6 +13,10 @@ use Illuminate\Http\Request;
 |
 */
 
+Route::prefix('/subscription')->group(function(){
+	Route::get('/{subscription}/status', 'WebdeskApiController@subcriptionStatus');
+});
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });

@@ -1,4 +1,4 @@
-<div class="card" style="margin-bottom: 1em">
+<div class="card" style="margin-bottom: 1em" id="sub-{{ $sub['id'] }}">
 	<header class="card-header">
 		
 	</header>
@@ -7,7 +7,7 @@
 			<span class="icon"><i class="fa fa-globe"></i></span> {{ $sub['domain_name'] }}
 		</div>
 		<div class="content">
-			<div class="level">
+			<div class="level is-mobile">
 				<div class="level-left">
 					<div class="level-item"><span class="icon {{ (!$sub['is_active']) ? 'has-text-danger' : 'has-text-success' }}"><i class="fa fa-circle"></i></span> {{ ($sub['is_active']) ? 'Active' : 'Inactive' }}</div>
 					<div class="level-item">
@@ -20,11 +20,19 @@
 				</div>
 			</div>
 			<progress class="progress is-success" max="100" value="{{ $sub['progress'] }}"></progress>
-			@if(Auth::user()->is_admin === 1)
-				<update-subscription v-bind:subid="{{ $sub['id'] }}" key="{{ $sub['id'] }}" v-on:modal="showModal($event)"></update-subscription>
-			@endif
-			<span class="tag is-info">Website progress - {{ $sub['progress'] }}%</span>
-			<span class="tag is-white has-text-weight-bold"><span class="icon has-text-primary"><i class="fa fa-info-circle"></i></span> {{ $sub['progress_description'] }}</span>
+			<div class="level is-mobile">
+				<div class="level-left">
+					@if(Auth::user()->is_admin === 1)
+						<update-subscription v-bind:subid="{{ $sub['id'] }}" key="{{ $sub['id'] }}" v-on:modal="showModal($event)"></update-subscription>
+					@endif
+					<span class="button is-small is-info" style="margin-left: 1em">Website progress - {{ $sub['progress'] }}%</span>
+					<span class="tag is-white has-text-weight-bold"><span class="icon has-text-primary"><i class="fa fa-info-circle"></i></span> {{ $sub['progress_description'] }}</span>
+				</div>
+				<div class="level-right">
+					<subscription-actions subid="{{ $sub['id'] }}" is-active="{{ $sub['is_active'] }}"></subscription-actions>
+				</div>
+			</div>
+			
 		</div>
 	</div>
 	

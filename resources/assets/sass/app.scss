@@ -1,6 +1,7 @@
 
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=PT+Sans:300,400,600,800|Montserrat:700,900");
+@import url('animate.css');
 
 // Variables
 @import "variables";
@@ -15,7 +16,7 @@ h1, h2, h3, h4{
 }
 
 p{
-	font-size: 16px;
+	font-size: 18px;
 	margin-bottom: 1em;
 }
 
@@ -30,6 +31,10 @@ p{
 
 .button.is-outlined{
 	border-width: 2px;
+}
+
+img.is-centered{
+	margin: 0 auto;
 }
 
 .social-links-sidebar{
@@ -463,10 +468,11 @@ input[type="checkbox"].is-toggle:checked:after{
 }
 
 #email-popup{
+	-webkit-backface-visibility: none;
 	.modal-content{
-		box-shadow: 0 10px 60px -6px rgba(0, 0, 0, 0.1);
+		box-shadow: 0 10px 60px -10px rgba(0, 0, 0, 0.2);
 		border-radius: 10px;
-		max-width: 480px;
+		// max-width: 480px;
 		.card-content{
 			padding:3em;
 			img{
@@ -478,13 +484,13 @@ input[type="checkbox"].is-toggle:checked:after{
 		}
 	}
 	.modal-close{
-		background-color: #333;
+		background-color: #ddd;
 	}
 }
 
 .modal-background{
 	&.custom{
-		background-color: #fff;
+		background-color: #f5f5f5;
 		&:before{
 			content: "";
 			display: block;
@@ -497,6 +503,24 @@ input[type="checkbox"].is-toggle:checked:after{
 			background: #209cee;
 		}
 	}
+}
+
+#audit-form{
+	label.label{
+		font-family: "Montserrat", serif;
+	}
+}
+
+.drop-enter-active{
+	opacity: 1;
+	animation-name: bounceInDown;
+	animation-duration: 1s;
+}
+
+.drop-leave-active{
+	opacity: 1;
+	animation-name: bounceOutUp;
+	animation-duration: 1s;
 }
 
 @media screen and (min-width:240px) and (max-width: 480px){

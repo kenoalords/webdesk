@@ -20,6 +20,7 @@ Vue.component('approve-payment', require('./components/ApprovePayment.vue'));
 Vue.component('update-subscription', require('./components/UpdateSubscription.vue'));
 Vue.component('subscription-modal', require('./components/SubscriptionModal.vue'));
 Vue.component('email-popup', require('./components/EmailPopup.vue'));
+Vue.component('subscription-actions', require('./components/SubscriptionActions.vue'));
 
 const app = new Vue({
     el: '#app',

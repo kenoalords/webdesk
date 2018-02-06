@@ -5,8 +5,8 @@
 
 @section('content')
 
-<div class="hero single-page" id="slider">
-    <div class="red-back" style="top: -150px; right: 0"></div>
+<div class="hero single-page is-dark" id="slider">
+    <!-- <div class="red-back" style="top: -150px; right: 0"></div> -->
     <!-- <div class="red-back"></div>
     <div class="grey-back"></div>
     <div class="blue-back"></div> -->

@@ -98,7 +98,7 @@
 
         <div class="container" style="margin-top: 5em">
             <div class="column has-text-centered">
-                <h3 class="title is-2 is-size-3-mobile">
+                <h3 class="title is-3 is-size-3-mobile">
                     Not sure which package is ideal for you?
                 </h3>
                 <h4 class="subtitle is-size-6-mobile has-text-grey" style="margin-top: 0em">

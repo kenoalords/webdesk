@@ -69,6 +69,7 @@ class SubscriptionController extends Controller
                 'notes'         => $r->notes,
     			'renew_interval'=> $r->renew_interval,
     			'include_logo'	=> ($r->include_logo) ? $r->include_logo : 0,
+                'access_token'  => time().'.'.strtoupper(uniqid(true)).'.'.parse_url($r->domain, PHP_URL_HOST),
     		]);
 
     		// Generate the invoice

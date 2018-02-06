@@ -115,7 +115,7 @@
 
 @include('includes.redesign')
 
-@include('includes.why_pay')
+@include('includes.consultation')
 
 @include('includes.works')
 
@@ -132,5 +132,6 @@
     </div>
 </div>
 
+@include('includes.why_pay')
 
 @endsection

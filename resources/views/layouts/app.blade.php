@@ -83,7 +83,7 @@
                             </ul>
                         </div>
                         <div class="level-item has-text-center">
-                            <a href="/"><img src="{{ asset('images/logo.png') }}" alt="{{ config('app.name') }}" style="width: 100px; height: auto; opacity: .2"></a>
+                            <a href="/"><img src="{{ asset('images/logo.png') }}" alt="{{ config('app.name') }}" style="width: 100px; height: auto; opacity: .6"></a>
                         </div>
                         <div class="level-right is-size-7">
                             <ul class="footer-menu has-text-right">

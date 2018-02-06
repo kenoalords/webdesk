@@ -13,13 +13,15 @@
 
 Route::get('/', 'MainController@homepage');
 Route::get('/about', 'MainController@aboutPage');
+Route::get('/website-audit', 'MainController@audit')->name('audit');
+Route::get('/website-audit/initiated', 'MainController@auditInitiated')->name('audit_initiated');
 Route::get('/pricing', 'MainController@pricingPage');
 Route::get('/privacy', 'MainController@privacy')->name('privacy');
 Route::get('/contact', 'ContactController@getForm')->name('contact_form');
 Route::post('/contact', 'ContactController@submitForm')->name('contact_form');
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
-Route::post('/subscribe', 'EmailSubscriptionController@subscribe');
+Route::post('/subscribe', 'EmailSubscriptionController@subscribe')->name('subscribe');
 
 Auth::routes();
 
@@ -59,5 +61,6 @@ Route::middleware('auth')->prefix('dashboard')->group(function(){
 		Route::get('/faq', 'FaqController@faqAdmin')->name('faq_admin');
 		Route::post('/faq', 'FaqController@submitFAQ')->name('faq_admin');
 		Route::post('/invoice/{invoice}/approve', 'PaymentController@approveInvoice');
+		Route::post('/subscription/manage', 'AdminController@manageSubscription');
 	});
 });

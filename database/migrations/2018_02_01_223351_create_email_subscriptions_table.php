@@ -16,6 +16,8 @@ class CreateEmailSubscriptionsTable extends Migration
         Schema::create('email_subscriptions', function (Blueprint $table) {
             $table->increments('id');
             $table->string('email');
+            $table->string('fullname');
+            $table->string('website');
             $table->ipAddress('ip')->nullable();
             $table->string('iso_code')->nullable();
             $table->string('country')->nullable();
