@@ -87,7 +87,7 @@
                         </div>
                         <div class="level-right is-size-7">
                             <ul class="footer-menu has-text-right">
-                                <li><a href="/">Terms of Service</a></li>
+                                <li><a href="{{ route('terms') }}">Terms of Service</a></li>
                                 <li><a href="/privacy">Privacy Policy</a></li>
                             </ul>
                         </div>

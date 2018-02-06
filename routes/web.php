@@ -13,6 +13,7 @@
 
 Route::get('/', 'MainController@homepage');
 Route::get('/about', 'MainController@aboutPage');
+Route::get('/terms', 'MainController@termsPage')->name('terms');
 Route::get('/website-audit', 'MainController@audit')->name('audit');
 Route::get('/website-audit/initiated', 'MainController@auditInitiated')->name('audit_initiated');
 Route::get('/pricing', 'MainController@pricingPage');

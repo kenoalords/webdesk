@@ -21,6 +21,11 @@ class MainController extends Controller
     		return view('pricing');
     }
 
+    public function termsPage()
+    {
+            return view('terms');
+    }
+
     public function privacy()
     {
         return view('privacy');
