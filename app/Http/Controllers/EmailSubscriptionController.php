@@ -17,7 +17,7 @@ class EmailSubscriptionController extends Controller
     		]);
     		$check = $emailSubcription->where('email', $request->email)->first();
 
-    		if ( $check->count() > 0 ) {
+    		if ( $check && $check->count() > 0 ) {
                 if( $request->ajax() )
                     return response()->json(true, 200);
                 else
