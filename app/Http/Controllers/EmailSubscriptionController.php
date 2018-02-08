@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use Mail;
 use App\Model\EmailSubscription;
 use Illuminate\Http\Request;
+use App\Mail\AuditRequestNotificationAdmin;
+use App\Mail\AuditRequestNotificationUser;
 
 class EmailSubscriptionController extends Controller
 {
@@ -36,6 +39,9 @@ class EmailSubscriptionController extends Controller
     					'iso_code' => $ip->iso_code,
     				]);
     		if($subscribe){
+                // logger($subscribe);
+                Mail::to(config('app.email.hello'))->send(new AuditRequestNotificationAdmin($subscribe));
+                Mail::to($request->email)->send(new AuditRequestNotificationUser($subscribe));
                 if( $request->ajax() ){
                     return response()->json(true, 200);
                 }
