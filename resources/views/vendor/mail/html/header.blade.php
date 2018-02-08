@@ -1,7 +1,13 @@
 <tr>
     <td class="header">
-        <a href="{{ $url }}">
-            {{ $slot }}
-        </a>
+        <table class="inner-body">
+        	<tr>
+        		<td class="header-logo">
+        			<a href="{{ $url }}">
+		            	{{ $slot }}
+		        	</a>
+        		</td>
+        	</tr>
+        </table>
     </td>
 </tr>

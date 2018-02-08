@@ -89,7 +89,7 @@ img {
 /* Layout */
 
 .wrapper {
-    background-color: #f5f8fa;
+    background-color: #fff;
     margin: 0;
     padding: 0;
     width: 100%;
@@ -111,7 +111,7 @@ img {
 
 .header {
     padding: 25px 0;
-    text-align: center;
+    text-align: left;
 }
 
 .header a {
@@ -140,10 +140,14 @@ img {
     background-color: #FFFFFF;
     margin: 0 auto;
     padding: 0;
-    width: 570px;
+    width: 480px;
     -premailer-cellpadding: 0;
     -premailer-cellspacing: 0;
-    -premailer-width: 570px;
+    -premailer-width: 480px;
+}
+
+.header-logo{
+    padding: 0 35px;
 }
 
 /* Subcopy */
@@ -163,17 +167,17 @@ img {
 .footer {
     margin: 0 auto;
     padding: 0;
-    text-align: center;
-    width: 570px;
+    text-align: left;
+    width: 480px;
     -premailer-cellpadding: 0;
     -premailer-cellspacing: 0;
-    -premailer-width: 570px;
+    -premailer-width: 480px;
 }
 
 .footer p {
     color: #AEAEAE;
     font-size: 12px;
-    text-align: center;
+    /*text-align: center;*/
 }
 
 /* Tables */
@@ -223,6 +227,7 @@ img {
     display: block;
     text-decoration: none;
     -webkit-text-size-adjust: none;
+    text-align: center;
 }
 
 .button-blue {
