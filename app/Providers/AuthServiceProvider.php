@@ -27,7 +27,7 @@ class AuthServiceProvider extends ServiceProvider
 
         // Provide authorization for viewing invoices
         Gate::define('view-invoice', function($user, $invoice){
-            return $user->id === $invoice->user_id;
+            return $user->id === $invoice->user_id || $user->is_admin === 1;
         });
     }
 }
