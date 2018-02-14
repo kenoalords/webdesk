@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>@yield('title') {{ config('app.name') }} - Website Designer in Nigeria</title>
+        <title>@yield('title') {{ config('app.name') }} - Best Website Designers and Manager in Lagos, Nigeria.</title>
         <meta name="description" content="@yield('description')">
 
         <link rel="icon" href="{{ asset('favicon.png') }}" type="image/png">

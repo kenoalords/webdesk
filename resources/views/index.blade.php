@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Professional website designers in Lagos | ')
+
 @section('description', 'Own a professional website for as low as ₦4,999/Monthly. You also get SEO Optimization, Graphics design and Online marketing solutions. Sign up today')
 
 @section('content')

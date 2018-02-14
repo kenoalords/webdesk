@@ -6,7 +6,7 @@ body, body *:not(html):not(style):not(br):not(tr):not(code) {
 }
 
 body {
-    background-color: #82ccdd;
+    background-color: #f9f9f9;
     color: #74787E;
     height: 100%;
     hyphens: auto;

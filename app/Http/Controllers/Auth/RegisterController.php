@@ -7,6 +7,7 @@ use App\Model\User;
 use App\Model\Package;
 use App\Http\Controllers\Controller;
 use App\Mail\SubscriptionNotification;
+use App\Mail\AdminSubscriptionNotification;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -77,12 +78,12 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         $user =  User::create([
-            'username' => str_slug($data['email']),
-            'email' => $data['email'],
+            'username' => str_slug( strtolower( $data['email'] ) ),
+            'email' => strtolower( $data['email'] ),
             'password' => bcrypt($data['password']),
-            'fullname' => $data['fullname'],
-            'city' => $data['city'],
-            'state' => $data['state'],
+            'fullname' => ucwords(strtolower($data['fullname'])),
+            'city' => ucwords(strtolower($data['city'])),
+            'state' => ucwords(strtolower($data['state'])),
             'phone_number' => $data['phone_number'],
         ]);
         $subscription = $user->subscription()->create([
@@ -135,7 +136,8 @@ class RegisterController extends Controller
                 'uid'           => uniqid(true),
                 'description'   => $description,
             ]);
-            Mail::to($user)->bcc(config('app.email'))->send(new SubscriptionNotification($invoice->id));
+            Mail::to($user)->send(new SubscriptionNotification($invoice->id));
+            Mail::to(config('app.email.billing'))->send(new AdminSubscriptionNotification($invoice, $subscription));
             $this->invoice = $invoice->id;
         }
         return $user;
