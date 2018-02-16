@@ -6,6 +6,7 @@ use Mail;
 use App\Model\Subscription;
 use App\Model\Package;
 use App\Http\Requests\AddSubscriptionRequest;
+use Illuminate\Support\Facades\Gate;
 use App\Transformers\SubscriptionTransformer;
 use App\Mail\SubscriptionNotification;
 use Illuminate\Http\Request;
@@ -86,4 +87,17 @@ class SubscriptionController extends Controller
     			return redirect()->route('show_invoice', ['invoice' => $invoice->id]);
     		}
     	}
+
+        public function viewSubscription(Request $request, Subscription $subscription)
+        {
+            if ( Gate::denies('view-subscription', $subscription) ){
+                die('Permission denied');
+                exit;
+            }
+            $subscription = fractal()->item($subscription)
+                                ->transformWith(new SubscriptionTransformer())
+                                ->toArray();
+            // dd($subscription);
+            return view('subscription.view')->with('subscription', $subscription);
+        }
 }

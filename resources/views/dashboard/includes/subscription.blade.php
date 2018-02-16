@@ -3,9 +3,9 @@
 		
 	</header>
 	<div class="card-content">
-		<div class="title is-4">
-			<span class="icon"><i class="fa fa-globe"></i></span> {{ $sub['domain_name'] }}
-		</div>
+		<h4 class="title is-6">
+			<a href="{{ route('view_subscription', ['subscription'=>$sub['id']]) }}"><span class="icon"><i class="fa fa-globe"></i></span> {{ $sub['domain_name'] }}</a>
+		</h4>
 		<div class="content">
 			<div class="level is-mobile">
 				<div class="level-left">

@@ -39,6 +39,7 @@ Route::middleware('auth')->prefix('dashboard')->group(function(){
 	Route::get('/', 'DashboardController@index')->name('home');
 	Route::get('/invoices', 'InvoiceController@invoices')->name('invoices');
 	Route::get('/subscriptions', 'SubscriptionController@showSubscriptions')->name('subscriptions');
+	Route::get('/subscription/{subscription}', 'SubscriptionController@viewSubscription')->name('view_subscription');
 	Route::get('/subscriptions/add', 'SubscriptionController@add')->name('add_subscription');
 	Route::post('/subscriptions/add', 'SubscriptionController@submit')->name('add_subscription');
 

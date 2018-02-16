@@ -18,7 +18,8 @@ class UserTransformer extends TransformerAbstract
             'id'        => $u->id,
             'fullname'  => $u->fullname,
             'location'  => $u->city . ', ' . $u->state,
-            'phone'     => $u->phone_number
+            'phone'     => $u->phone_number,
+            'email'     => $u->email,
         ];
     }
 }

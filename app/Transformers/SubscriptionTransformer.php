@@ -4,6 +4,7 @@ namespace App\Transformers;
 
 use App\Model\Subscription;
 use App\Model\Package;
+use App\Model\User;
 use Carbon\Carbon;
 use App\Transformers\PackageTransformer;
 use League\Fractal\TransformerAbstract;
@@ -16,7 +17,7 @@ class SubscriptionTransformer extends TransformerAbstract
      * @return array
      */
 
-    protected $defaultIncludes = ['package'];
+    protected $defaultIncludes = ['package', 'user'];
 
     public function transform(Subscription $sub)
     {
@@ -25,6 +26,7 @@ class SubscriptionTransformer extends TransformerAbstract
             'id'            => $sub->id,
             'user_id'       => $sub->user_id,
             'domain_name'   => $sub->domain_name,
+            'notes'         => $sub->notes,
             'has_domain'    => (bool)$sub->has_domain,
             'include_logo'  => (bool)$sub->include_logo,
             'is_active'     => (bool)$sub->is_active,
@@ -43,5 +45,11 @@ class SubscriptionTransformer extends TransformerAbstract
     {
         $package = Package::find($sub->package_id);
         return $this->item($package, new PackageTransformer);
+    }
+
+    public function includeUser(Subscription $sub)
+    {
+        $user = User::find($sub->user_id);
+        return $this->item($user, new UserTransformer);
     }
 }
