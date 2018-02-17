@@ -105,17 +105,17 @@
         },
 
         mounted() {
-            // setTimeout(()=>{
-            //     if ( !sessionStorage.getItem('popup') ){
-            //         this.isActive = true;
-            //     }
-            // }, 3000);
-            $(document).on('mouseleave', ()=>{
+            setTimeout(()=>{
                 if ( !sessionStorage.getItem('popup') ){
                     this.isActive = true;
-                    sessionStorage.setItem('popup', true);
                 }
-            });
+            }, 5000);
+            // $(document).on('mouseleave', ()=>{
+            //     if ( !sessionStorage.getItem('popup') ){
+            //         this.isActive = true;
+            //         sessionStorage.setItem('popup', true);
+            //     }
+            // });
             // this.isActive = true;
         }
     }
