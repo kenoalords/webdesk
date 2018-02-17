@@ -21,6 +21,7 @@ Vue.component('update-subscription', require('./components/UpdateSubscription.vu
 Vue.component('subscription-modal', require('./components/SubscriptionModal.vue'));
 Vue.component('email-popup', require('./components/EmailPopup.vue'));
 Vue.component('subscription-actions', require('./components/SubscriptionActions.vue'));
+Vue.component('ban-ip', require('./components/BanIP.vue'));
 
 const app = new Vue({
     el: '#app',

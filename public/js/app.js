@@ -11332,7 +11332,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(12);
-module.exports = __webpack_require__(59);
+module.exports = __webpack_require__(62);
 
 
 /***/ }),
@@ -11345,7 +11345,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vee_validate__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vee_validate___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vee_validate__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_slick_carousel__ = __webpack_require__(58);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_slick_carousel__ = __webpack_require__(61);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_slick_carousel___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_slick_carousel__);
 
 
@@ -11407,6 +11407,7 @@ Vue.component('update-subscription', __webpack_require__(46));
 Vue.component('subscription-modal', __webpack_require__(49));
 Vue.component('email-popup', __webpack_require__(52));
 Vue.component('subscription-actions', __webpack_require__(55));
+Vue.component('ban-ip', __webpack_require__(58));
 
 var app = new Vue({
 	el: '#app',
@@ -48632,6 +48633,155 @@ if (false) {
 /* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(59)
+/* template */
+var __vue_template__ = __webpack_require__(60)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/BanIP.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-bc10ca62", Component.options)
+  } else {
+    hotAPI.reload("data-v-bc10ca62", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 59 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            ipAddress: this.ip,
+            isBanned: false,
+            isLoading: false
+        };
+    },
+
+    props: {
+        ip: null
+    },
+    methods: {
+        getBannedStatus: function getBannedStatus() {
+            var $this = this;
+            $this.isLoading = true;
+            try {
+                axios.post('/dashboard/admin/contacts/ban-ip-check', { ip: $this.ipAddress }).then(function (res) {
+                    $this.isBanned = res.data;
+                    $this.isLoading = false;
+                });
+            } catch (error) {
+                console.log(error.message);
+            };
+        },
+        postBanRequest: function postBanRequest() {
+            var $this = this;
+            $this.isLoading = true;
+            try {
+                axios.post('/dashboard/admin/contacts/ban-ip', { ip: $this.ipAddress }).then(function (res) {
+                    $this.isBanned = res.data;
+                    $this.isLoading = false;
+                });
+            } catch (error) {
+                console.log(error.message);
+            };
+        }
+    },
+    mounted: function mounted() {
+        this.getBannedStatus();
+    }
+});
+
+/***/ }),
+/* 60 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "level-item" }, [
+    _c(
+      "a",
+      {
+        staticClass: "button is-small level-item",
+        class: {
+          "is-danger": _vm.isBanned,
+          "is-light": !_vm.isBanned,
+          "is-loading": _vm.isLoading
+        },
+        attrs: { href: "#" },
+        on: {
+          click: function($event) {
+            $event.preventDefault()
+            _vm.postBanRequest()
+          }
+        }
+      },
+      [
+        _vm._v(
+          "\n        " + _vm._s(_vm.isBanned ? "Banned" : "Ban IP") + "\n    "
+        )
+      ]
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-bc10ca62", module.exports)
+  }
+}
+
+/***/ }),
+/* 61 */
+/***/ (function(module, exports, __webpack_require__) {
+
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
      _ _      _       _
  ___| (_) ___| | __  (_)___
@@ -51649,7 +51799,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
 /***/ }),
-/* 59 */
+/* 62 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

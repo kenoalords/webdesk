@@ -4,8 +4,8 @@
 
 @section('content')
 
-<div class="hero single-page is-dark" id="slider">
-    <div class="container" id="slider-content">
+<div class="hero is-medium" id="slider">
+    <div class="hero-body" id="slider-content">
         <div class="columns">
             <div class="column is-8 is-offset-2">
             	<div class="columns">

@@ -4,33 +4,22 @@
 
 @section('content')
 
-<div class="hero" id="slider">
-    <div class="red-back"></div>
-    <div class="grey-back"></div>
-    <div class="blue-back"></div>
-    
-    <div class="container" id="slider-content">
-        <div class="hero is-small has-text-centered-mobile">
-            <div class="hero-body">
-                <div class="columns">
-                    <div class="column is-8 is-offset-2">
-                        <div class="columns">
-                            <div class="column is-6">
-                                <h1 class="title is-1 has-text-white is-size-3-mobile">
-                                    Let us build and manage your dream website
-                                </h1>
-                                <p><a href="/register" class="button is-raised is-white"><span>Sign up today</span> <span class="icon"><i class="fa fa-arrow-right"></i></span></a></p>
-                            </div>
-                            <div class="column is-6">
-                                <figure class="image">
-                                    <img src="{{ asset('images/imac.png') }}" alt="Webdesk work sample">
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<div class="hero is-medium" id="slider">
+    <!-- <div class="red-back"></div> -->
+    <!-- <div class="grey-back"></div> -->
+    <!-- <div class="blue-back"></div> -->
+    <div class="hero-body">
+        <div class="columns is-centered">
+            <div class="column is-8 has-text-centered">
+                <h1 class="title is-1 has-text-white is-size-3-mobile is-size-2-tablet">
+                    We build and manage Professional Websites for Businesses
+                </h1>
+                <p><a href="/register" class="button is-white is-raised is-long-button"><span>Sign up today</span> <span class="icon"><i class="fa fa-arrow-right"></i></span></a></p>
+                <figure class="image">
+                    <img src="{{ asset('images/imac.png') }}" alt="Webdesk work sample">
+                </figure>
             </div>
-        </div>  
+        </div>
     </div>
 </div>
 

@@ -3445,84 +3445,98 @@ img.is-centered {
   position: relative;
   top: -54px;
   z-index: 1;
+  background: url(/fonts/slider-back.svg?4e1b8096135389f4ead92fd9042977d2) no-repeat center -150px;
+  background-size: cover;
 }
 
-#slider .grey-back {
-  background-color: #f00;
-  position: absolute;
+#slider figure img {
   width: 100%;
-  height: 640px;
-  -webkit-transform-origin: 10% 10%;
-          transform-origin: 10% 10%;
-  -webkit-transform: rotate(-7deg);
-          transform: rotate(-7deg);
-  left: -200px;
-  top: -150px;
-  border-radius: 20px;
-  opacity: 1;
-  -webkit-box-shadow: 10px 0 40px rgba(0, 0, 0, 0.1);
-          box-shadow: 10px 0 40px rgba(0, 0, 0, 0.1);
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2f91ed+0,badbfc+100 */
-  background: #2f91ed;
-  /* Old browsers */
-  /* FF3.6-15 */
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(45deg, #2f91ed 0%, #badbfc 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f91ed', endColorstr='#badbfc',GradientType=1 );
-  /* IE6-9 fallback on horizontal gradient */
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3eb8dd+0,cff0f9+100 */
-}
-
-#slider .blue-back {
-  position: absolute;
-  width: 150%;
-  height: 640px;
-  -webkit-transform-origin: 10% 10%;
-          transform-origin: 10% 10%;
-  -webkit-transform: rotate(-11deg);
-          transform: rotate(-11deg);
-  background-color: #fff;
-  -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
-  opacity: .2;
-  top: -250px;
-  border-radius: 20px;
-}
-
-#slider .red-back {
-  background-color: #f00;
-  position: absolute;
-  width: 100%;
-  height: 640px;
-  -webkit-transform-origin: 30% 0%;
-          transform-origin: 30% 0%;
-  -webkit-transform: rotate(-4deg);
-          transform: rotate(-4deg);
-  right: -200px;
-  top: -150px;
-  border-radius: 20px;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2875c1+0,7abcff+100 */
-  background: #2875c1;
-  /* Old browsers */
-  /* FF3.6-15 */
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(45deg, #2875c1 0%, #7abcff 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2875c1', endColorstr='#7abcff',GradientType=1 );
-  /* IE6-9 fallback on horizontal gradient */
-}
-
-#slider #slider-content {
-  margin-top: 10em;
+  max-width: 480px;
+  margin: 0 auto;
 }
 
 #slider.single-page {
   min-height: 520px;
 }
 
+.is-long-button {
+  padding-right: 3em;
+  padding-left: 3em;
+}
+
 .pricing .hero-body {
   padding-top: 0 !important;
+}
+
+.pricing .card {
+  -webkit-box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 50px -10px rgba(0, 0, 0, 0.3);
+  padding-bottom: 1em;
+  border-radius: 3px;
+}
+
+.pricing .card.is-popular {
+  -webkit-box-shadow: 0 0 120px -10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 120px -10px rgba(0, 0, 0, 0.4);
+}
+
+.pricing .card .title {
+  font-weight: 800;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.pricing .card .info {
+  opacity: .5;
+}
+
+.pricing .card img {
+  opacity: .5;
+  max-width: 100px;
+  margin-bottom: 2em;
+}
+
+.pricing .card .card-content ul {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 2em;
+  font-family: "Montserrat", "PT Sans", sans-serif;
+}
+
+.pricing .card .card-content ul li {
+  padding: .5em 0;
+}
+
+.pricing .card .card-content ul li:first-child {
+  text-transform: uppercase;
+}
+
+.pricing .card .card-content hr {
+  opacity: .5;
+}
+
+.pricing .card .card-content .setup-fee {
+  font-size: 2.75em;
+}
+
+ul.features {
+  letter-spacing: 1px;
+}
+
+ul.features li {
+  display: block;
+  width: 25%;
+  float: left;
+  padding: 5px 0;
+  font-weight: 800;
+}
+
+ul.features li:before {
+  content: "\F00C";
+  font-family: "FontAwesome";
+  display: inline-block;
+  margin-right: 3px;
 }
 
 .navbar.is-transparent {
@@ -3631,11 +3645,9 @@ aside .menu-list a:hover {
 }
 
 .card.is-popular {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
   position: relative;
   z-index: 1;
-  border: 2px solid #2d69c9;
+  border-top: 5px solid #23d160;
   border-radius: 3px;
 }
 
@@ -3735,8 +3747,9 @@ aside .menu-list a:hover {
 
 .naira:before {
   content: "\20A6";
-  font-family: Arial, "Times New Roman", sans-serif;
+  font-family: "Tahoma", "Times New Roman", sans-serif;
   display: inline-block;
+  font-weight: bold;
   margin-right: 1px;
 }
 
@@ -3951,11 +3964,26 @@ input[type="checkbox"].is-toggle:checked:after {
   .business {
     margin-bottom: 2em;
   }
+
+  ul.features li {
+    width: 100%;
+    float: none;
+  }
 }
 
 @media screen and (min-width: 480px) and (max-width: 768px) {
   #teaser h1 {
     font-size: 2em;
+  }
+
+  ul.features li {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  ul.features li {
+    width: 33%;
   }
 }
 

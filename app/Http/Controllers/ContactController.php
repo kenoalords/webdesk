@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Mail;
 use App\Mail\ContactFormNotification;
 use App\Mail\ContactFormNotificationResponse;
+use App\Mail\BannedIpNotification;
 use App\Model\ContactForm;
+use App\Model\BannedIp;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -15,8 +17,13 @@ class ContactController extends Controller
 		return view('contact.form');
 	}
 
-	public function submitForm(Request $request, ContactForm $contact)
+	public function submitForm(Request $request, ContactForm $contact, BannedIp $banned_ip)
 	{
+		$ip_check = $banned_ip->where('ip', $request->ip())->get();
+		if ( $ip_check->count() > 0 ){
+			Mail::to(config('app.email.support'))->send(new BannedIpNotification($request->ip()));
+			return redirect('/');
+		}
 		$request->validate([
 			'fullname'	=> 'required|string',
 			'email'		=> 'required|email',

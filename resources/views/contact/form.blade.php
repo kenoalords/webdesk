@@ -2,10 +2,8 @@
 
 @section('content')
 
-<div class="hero single-page" id="slider" style="min-height: 420px">
-    <div class="red-back" style="top: -250px; right: 0"></div>
-    
-    <div class="container" id="slider-content" style="margin-top: 7em">
+<div class="hero is-medium" id="slider" style="min-height: 420px">    
+    <div class="hero-body">
         <div class="columns">
             <div class="column is-8 is-offset-2 has-text-centered ">
                 <h1 class="title is-1 is-size-3-mobile has-text-white">Get in touch today</h1>

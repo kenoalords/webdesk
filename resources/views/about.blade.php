@@ -5,13 +5,13 @@
 
 @section('content')
 
-<div class="hero single-page is-dark" id="slider">
+<div class="hero is-medium" id="slider">
     <!-- <div class="red-back" style="top: -150px; right: 0"></div> -->
     <!-- <div class="red-back"></div>
     <div class="grey-back"></div>
     <div class="blue-back"></div> -->
     
-    <div class="container" id="slider-content">
+    <div class="hero-body">
         <div class="columns">
             <div class="column is-6 is-offset-3 has-text-centered ">
                 <h1 class="title is-1 has-text-white">We are webdesk.ng</h1>

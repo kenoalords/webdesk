@@ -7,6 +7,7 @@
                     <li><a href="{{ route('subscriptions_admin') }}" class="{{ (Request::path() == 'dashboard/admin/subscriptions') ? 'is-active' : '' }}"><span class="icon"><i class="fa fa-gear"></i></span>Subscriptions</a></li>
                     <li><a href="{{ route('invoices_admin') }}" class="{{ (Request::path() == 'dashboard/admin/invoices') ? 'is-active' : '' }}"><span class="icon"><i class="fa fa-gear"></i></span>Invoices</a></li>
                     <li><a href="{{ route('faq_admin') }}"><span class="icon"><i class="fa fa-gear"></i></span>Faq</a></li>
+                    <li><a href="{{ route('website_contact') }}"><span class="icon"><i class="fa fa-envelope"></i></span>Contacts</a></li>
                 </ul>
                 @endif
                 

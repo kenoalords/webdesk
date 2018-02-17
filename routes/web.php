@@ -64,5 +64,8 @@ Route::middleware('auth')->prefix('dashboard')->group(function(){
 		Route::post('/faq', 'FaqController@submitFAQ')->name('faq_admin');
 		Route::post('/invoice/{invoice}/approve', 'PaymentController@approveInvoice');
 		Route::post('/subscription/manage', 'AdminController@manageSubscription');
+		Route::get('/contacts', 'BannedIpController@index')->name('website_contact');
+		Route::post('/contacts/ban-ip-check', 'BannedIpController@getBannedStatus');
+		Route::post('/contacts/ban-ip', 'BannedIpController@banIP');
 	});
 });

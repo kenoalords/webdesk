@@ -32,7 +32,8 @@
         <div id="app">
             <email-popup></email-popup>
             <div id="main-header">
-                <div class="container">
+                <div class="columns is-centered">
+                    <div class="column is-8">
                     <nav class="navbar is-primary is-transparent is-fixed-top-mobile" role="navigation" aria-label="main navigation">
                         <div class="navbar-brand">
                             <a class="navbar-item" href="/">
@@ -51,7 +52,7 @@
                             <a href="/pricing" class="navbar-item {{ (Request::path() == '/pricing') ? 'is-active' : '' }}">Pricing</a>
                             <a href="/contact" class="navbar-item">Contact</a>
                             <div class="navbar-item">
-                            <a href="/login" class="button is-info" style="padding-right: 2em; padding-left: 2em">
+                            <a href="/login" class="button is-success" style="padding-right: 2em; padding-left: 2em">
                                     <span class="icon"><i class="fa fa-lock"></i></span>
                                     <span>Client login</span>
                             </a>
@@ -59,6 +60,7 @@
                             <!-- <div class="navbar-item"></div> -->
                         </div> <!-- Navbar menu -->
                     </nav>
+                    </div>
                 </div>
             </div>
             @yield('content')

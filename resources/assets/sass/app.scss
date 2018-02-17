@@ -58,82 +58,89 @@ img.is-centered{
 	position: relative;
 	top: -54px;
 	z-index: 1;
-	.grey-back{
-		background-color: #f00;
-		position: absolute;
-		width: 100%;
-		height: 640px;
-		transform-origin: 10% 10%;
-		transform: rotate(-7deg);
-		left: -200px;
-		top: -150px;
-		border-radius: 20px;
-		opacity: 1;
-		box-shadow: 10px 0 40px rgba(0,0,0,.1);
-		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2f91ed+0,badbfc+100 */
-		background: #2f91ed; /* Old browsers */
-		background: -moz-linear-gradient(45deg, #2f91ed 0%, #badbfc 100%); /* FF3.6-15 */
-		background: -webkit-linear-gradient(45deg, #2f91ed 0%,#badbfc 100%); /* Chrome10-25,Safari5.1-6 */
-		background: linear-gradient(45deg, #2f91ed 0%,#badbfc 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2f91ed', endColorstr='#badbfc',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#3eb8dd+0,cff0f9+100 */
-		// background: #3eb8dd; /* Old browsers */
-		// background: -moz-linear-gradient(45deg, #3eb8dd 0%, #cff0f9 100%); /* FF3.6-15 */
-		// background: -webkit-linear-gradient(45deg, #3eb8dd 0%,#cff0f9 100%); /* Chrome10-25,Safari5.1-6 */
-		// background: linear-gradient(45deg, #3eb8dd 0%,#cff0f9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-		// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3eb8dd', endColorstr='#cff0f9',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-	}
-	.blue-back{
-		position: absolute;
-		width: 150%;
-		height: 640px;
-		transform-origin: 10% 10%;
-		transform: rotate(-11deg);
-		background-color: #fff;
-		box-shadow: 0 0 50px rgba(0,0,0,.1);
-		opacity: .2;
-		top: -250px;
-		border-radius: 20px;
-	}
-	.red-back{
-		background-color: #f00;
-		position: absolute;
-		width: 100%;
-		height: 640px;
-		transform-origin: 30% 0%;
-		transform: rotate(-4deg);
-		right: -200px;
-		top: -150px;
-		border-radius: 20px;
-		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2875c1+0,7abcff+100 */
-		background: #2875c1; /* Old browsers */
-		background: -moz-linear-gradient(45deg, #2875c1 0%, #7abcff 100%); /* FF3.6-15 */
-		background: -webkit-linear-gradient(45deg, #2875c1 0%,#7abcff 100%); /* Chrome10-25,Safari5.1-6 */
-		background: linear-gradient(45deg, #2875c1 0%,#7abcff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2875c1', endColorstr='#7abcff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */	
+	background: url('slider-back.svg') no-repeat center -150px;
+	background-size: cover;
+	figure{
+		img{
+			width: 100%;
+			max-width:480px;
+			margin: 0 auto;
+		}
 	}
 
-	#slider-content{
-		margin-top: 10em;
-	}
 	&.single-page{
 		min-height: 520px;
-		
-		// .grey-back{
-		// 	top: -250px;
-		// }
-		// .blue-back{
-		// 	top: -350px;
-		// }
-		// .red-back{
-		// 	top: -320px;
-		// }
 	}
+}
+
+.is-long-button{
+	padding-right: 3em;
+	padding-left: 3em;
 }
 
 .pricing{
 	.hero-body{
 		padding-top:0 !important;
+	}
+	.card{
+		box-shadow: 0 0 50px -10px rgba(0,0,0,.3);
+		padding-bottom: 1em;
+		border-radius: 3px;
+		&.is-popular{
+			box-shadow: 0 0 120px -10px rgba(0,0,0,.4);
+			// border-color: #23d160;
+		}
+		.title{
+			font-weight: 800;
+			font-size: 1em;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+		}
+		.info{
+			opacity: .5;
+		}
+		img{
+			opacity: .5;
+			max-width: 100px;
+			margin-bottom: 2em;
+		}
+		.card-content{
+			ul{
+				font-size: 14px;
+				color: #777;
+				margin-bottom: 2em;
+				font-family: "Montserrat", "PT Sans", sans-serif;
+				li{
+					padding: .5em 0;
+					&:first-child{
+						text-transform: uppercase;
+					}
+				}
+			}
+			hr{
+				opacity: .5;
+			}
+			.setup-fee{
+				font-size: 2.75em;
+			}
+		}
+	}
+}
+
+ul.features{
+	letter-spacing: 1px;
+	li{
+		display: block;
+		width: 25%;
+		float: left;
+		padding: 5px 0;
+		font-weight: 800;
+		&:before{
+			content: "\f00c";
+			font-family: "FontAwesome";
+			display: inline-block;
+			margin-right: 3px;
+		}
 	}
 }
 
@@ -242,13 +249,14 @@ aside{
 
 .card{
 	&.is-popular{
-		transform: scale(1.05);
+		// transform: scale(1.05);
 		position: relative;
 		z-index: 1;
-		border:2px solid #2d69c9;
+		border-top:5px solid #23d160;
 		border-radius: 3px;
 	}
 }
+
 
 .is-option-list{
 	li{
@@ -338,8 +346,9 @@ aside{
 .naira{
 	&:before{
 		content: "\20A6";
-		font-family: Arial, "Times New Roman", sans-serif;
+		font-family: "Tahoma", "Times New Roman", sans-serif;
 		display: inline-block;
+		font-weight: bold;
 		margin-right: 1px;
 	}
 }
@@ -538,12 +547,32 @@ input[type="checkbox"].is-toggle:checked:after{
 	.basic, .business{
 		margin-bottom: 2em;
 	}
+	ul.features{
+		li{
+			width: 100%;
+			float: none;
+		}
+	}
 }
 
 @media screen and (min-width:480px) and (max-width: 768px){
 	#teaser{
 		h1{
 			font-size: 2em;
+		}
+	}
+	ul.features{
+		li{
+			width: 50%;
+		}
+	}
+	
+}
+
+@media screen and (min-width:769px) and (max-width: 1024px){
+	ul.features{
+		li{
+			width: 33%;
 		}
 	}
 }
