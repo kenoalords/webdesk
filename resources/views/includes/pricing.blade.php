@@ -70,7 +70,7 @@
                     </div>
 
                     <!-- Standard features -->
-                    <h3 class="title is-3 has-text-centered" style="margin-top: 2em;">Standard Features</h3>
+                    <h3 class="title is-3 has-text-centered is-size-4-mobile" style="margin-top: 2em;">Standard Features</h3>
                     <p class="subtitle is-5 has-text-centered has-text-grey">All our website solutions comes standard with the following features</p>
                     <ul class="features is-clearfix">
                         <li><span>Custom Design</span></li>
@@ -95,7 +95,7 @@
 
         <div class="container" style="margin-top: 2em">
             <div class="column has-text-centered">
-                <h3 class="title is-5 is-size-3-mobile">
+                <h3 class="title is-5 is-size-4-mobile">
                     Not sure which package is ideal for you?
                 </h3>
                 <h4 class="subtitle is-size-6-mobile has-text-grey" style="margin-top: 0em">

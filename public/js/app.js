@@ -48208,17 +48208,12 @@ var render = function() {
                               }),
                               _vm._v(" "),
                               _c("h3", { staticClass: "title is-marginless" }, [
-                                _vm._v("Get a FREE website audit")
+                                _vm._v("Get a FREE website review")
                               ]),
                               _vm._v(" "),
                               _c("p", [
                                 _vm._v(
-                                  "Let our experts have a look at your current website and identify areas for improvement, all for "
-                                ),
-                                _c(
-                                  "span",
-                                  { staticClass: "has-text-weight-bold" },
-                                  [_vm._v("FREE!")]
+                                  "Find out how your company's website can be improved, free of charge and with no obligation"
                                 )
                               ]),
                               _vm._v(" "),

@@ -46,7 +46,7 @@
 
 <div class="hero" id="sl">
     <div class="hero-body">
-        <h3 class="title is-2 has-text-centered">What you get!</h3>
+        <h3 class="title is-2 has-text-centered is-size-4-mobile">What you get!</h3>
         <hr style="opacity: .2">
         <div class="container">
             <div class="columns is-centered is-multiline">

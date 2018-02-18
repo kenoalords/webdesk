@@ -8,8 +8,8 @@
                         <div class="card-content has-text-centered">
                             <div v-if="!isSubmitted">
                                 <img :src="iconUrl" alt="Email popup" class="image is-128x128 is-centered">
-                                <h3 class="title is-marginless">Get a FREE website audit</h3>
-                                <p>Let our experts have a look at your current website and identify areas for improvement, all for <span class="has-text-weight-bold">FREE!</span></p>
+                                <h3 class="title is-marginless">Get a FREE website review</h3>
+                                <p>Find out how your company's website can be improved, free of charge and with no obligation</p>
 
                                 <div class="field">
                                     <div class="control">
