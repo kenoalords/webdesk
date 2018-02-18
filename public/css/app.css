@@ -3522,6 +3522,7 @@ img.is-centered {
 
 ul.features {
   letter-spacing: 1px;
+  /*font-size: 14px;*/
 }
 
 ul.features li {
@@ -3532,7 +3533,14 @@ ul.features li {
   font-weight: 800;
 }
 
-ul.features li:before {
+ul.features li span {
+  display: inline-block;
+  /*padding: 5px 10px;*/
+  /*border-radius: 5px;*/
+  /*background: #eee;*/
+}
+
+ul.features li span:before {
   content: "\F00C";
   font-family: "FontAwesome";
   display: inline-block;
@@ -3960,6 +3968,10 @@ input[type="checkbox"].is-toggle:checked:after {
     width: 110%;
   }
 
+  .is-home {
+    padding-top: 4em;
+  }
+
   .basic,
   .business {
     margin-bottom: 2em;
@@ -3974,6 +3986,10 @@ input[type="checkbox"].is-toggle:checked:after {
 @media screen and (min-width: 480px) and (max-width: 768px) {
   #teaser h1 {
     font-size: 2em;
+  }
+
+  .is-home {
+    padding-top: 4em;
   }
 
   ul.features li {

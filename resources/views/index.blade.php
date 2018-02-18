@@ -4,17 +4,17 @@
 
 @section('content')
 
-<div class="hero is-medium" id="slider">
+<div class="hero is-medium is-home" id="slider">
     <!-- <div class="red-back"></div> -->
     <!-- <div class="grey-back"></div> -->
     <!-- <div class="blue-back"></div> -->
     <div class="hero-body">
         <div class="columns is-centered">
             <div class="column is-8 has-text-centered">
-                <h1 class="title is-1 has-text-white is-size-3-mobile is-size-2-tablet">
+                <h1 class="title is-1 has-text-white is-size-4-mobile is-size-2-tablet">
                     We build and manage Professional Websites for Businesses
                 </h1>
-                <p><a href="/register" class="button is-white is-raised is-long-button"><span>Sign up today</span> <span class="icon"><i class="fa fa-arrow-right"></i></span></a></p>
+                <p><a href="/register" class="button is-success is-raised is-long-button"><span>Sign up today</span> <span class="icon"><i class="fa fa-arrow-right"></i></span></a></p>
                 <figure class="image">
                     <img src="{{ asset('images/imac.png') }}" alt="Webdesk work sample">
                 </figure>
@@ -30,7 +30,7 @@
                 <h1 class="title is-3 is-size-4-mobile" style="letter-spacing: -1px">Get a professional website to showcase your business and services, <span class="has-text-success">pay monthly.</span></h1>
                 <p>Our goal isn’t to just make great websites that your customers will love you for, but to create an experience that they will remember and ultimately drive sales.</p>
                 <p>
-                    <a href="/pricing?utm_source=landing_page&utm_medium=pricing_link_click&utm_campaign=landing_page_optimization" class="button is-raised is-link">
+                    <a href="/pricing?utm_source=landing_page&utm_medium=pricing_link_click&utm_campaign=landing_page_optimization" class="button is-raised is-success is-long-button">
                         <span>View Pricing</span>
                         <span class="icon is-small"> <i class="fa fa-arrow-right"></i></span>
                     </a>

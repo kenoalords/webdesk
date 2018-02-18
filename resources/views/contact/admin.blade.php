@@ -7,7 +7,7 @@
 		<h2 class="title is-3">Contact Form Requests</h2>
 		@if($contacts->count())
 			@foreach($contacts as $contact)
-				<div class="box">
+				<div class="box" id="contact-{{ $contact->id }}">
 					<div class="level">
 						<div class="level-left">
 							<h4 class="level-item">
@@ -20,6 +20,7 @@
 						<div class="level-right">
 							<a href="#" class="button is-small is-info level-item">Reply</a>
 							<ban-ip ip="{{ $contact->ip }}"></ban-ip>
+							<delete-contact-message id="{{ $contact->id }}"></delete-contact-message>
 						</div>
 					</div>
 					@if($contact->subject)

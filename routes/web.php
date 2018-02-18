@@ -67,5 +67,6 @@ Route::middleware('auth')->prefix('dashboard')->group(function(){
 		Route::get('/contacts', 'BannedIpController@index')->name('website_contact');
 		Route::post('/contacts/ban-ip-check', 'BannedIpController@getBannedStatus');
 		Route::post('/contacts/ban-ip', 'BannedIpController@banIP');
+		Route::delete('/contacts/{contactForm}/delete', 'ContactController@deleteContact');
 	});
 });

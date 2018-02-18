@@ -47,4 +47,10 @@ class ContactController extends Controller
 		$request->session()->flash('status', 'Received! We typically respond within 12 hours.');
 		return redirect()->route('contact_form');
 	}
+
+	public function deleteContact(Request $request, ContactForm $contactForm)
+	{
+		$contactForm->delete();
+		return response()->json(true, 200);
+	}
 }

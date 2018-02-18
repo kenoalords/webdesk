@@ -11332,7 +11332,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(12);
-module.exports = __webpack_require__(62);
+module.exports = __webpack_require__(65);
 
 
 /***/ }),
@@ -11345,7 +11345,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vee_validate__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vee_validate___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_vee_validate__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_slick_carousel__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_slick_carousel__ = __webpack_require__(64);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_slick_carousel___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_slick_carousel__);
 
 
@@ -11408,6 +11408,7 @@ Vue.component('subscription-modal', __webpack_require__(49));
 Vue.component('email-popup', __webpack_require__(52));
 Vue.component('subscription-actions', __webpack_require__(55));
 Vue.component('ban-ip', __webpack_require__(58));
+Vue.component('delete-contact-message', __webpack_require__(61));
 
 var app = new Vue({
 	el: '#app',
@@ -48159,17 +48160,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     mounted: function mounted() {
         var _this = this;
 
-        // setTimeout(()=>{
-        //     if ( !sessionStorage.getItem('popup') ){
-        //         this.isActive = true;
-        //     }
-        // }, 3000);
-        $(document).on('mouseleave', function () {
+        setTimeout(function () {
             if (!sessionStorage.getItem('popup')) {
                 _this.isActive = true;
-                sessionStorage.setItem('popup', true);
             }
-        });
+        }, 5000);
+        // $(document).on('mouseleave', ()=>{
+        //     if ( !sessionStorage.getItem('popup') ){
+        //         this.isActive = true;
+        //         sessionStorage.setItem('popup', true);
+        //     }
+        // });
         // this.isActive = true;
     }
 });
@@ -48780,6 +48781,144 @@ if (false) {
 
 /***/ }),
 /* 61 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(62)
+/* template */
+var __vue_template__ = __webpack_require__(63)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/DeleteContactMessage.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-7b25b7ee", Component.options)
+  } else {
+    hotAPI.reload("data-v-7b25b7ee", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 62 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            contactID: this.id,
+            isLoading: false
+        };
+    },
+
+    props: {
+        id: null
+    },
+    methods: {
+        deleteContactMessage: function deleteContactMessage() {
+            if (confirm('Are you sure you want to delete this message?')) {
+                var $this = this;
+                $this.isLoading = true;
+                try {
+                    axios.delete('/dashboard/admin/contacts/' + $this.contactID + '/delete').then(function (res) {
+                        $this.isLoading = false;
+                        $('#contact-' + $this.contactID).slideUp('fast');
+                    });
+                } catch (error) {
+                    console.log(error.message);
+                };
+            }
+        }
+    },
+    mounted: function mounted() {}
+});
+
+/***/ }),
+/* 63 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "level-item" }, [
+    _c(
+      "a",
+      {
+        staticClass: "button is-small",
+        class: { "is-loading": _vm.isLoading },
+        attrs: { href: "#" },
+        on: {
+          click: function($event) {
+            $event.preventDefault()
+            _vm.deleteContactMessage()
+          }
+        }
+      },
+      [_vm._m(0), _vm._v(" "), _c("span", [_vm._v("Delete")])]
+    )
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "icon" }, [
+      _c("i", { staticClass: "fa fa-trash" })
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-7b25b7ee", module.exports)
+  }
+}
+
+/***/ }),
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -51799,7 +51938,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 
 
 /***/ }),
-/* 62 */
+/* 65 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
