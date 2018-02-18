@@ -3445,14 +3445,14 @@ img.is-centered {
   position: relative;
   top: -54px;
   z-index: 1;
-  background: url(/fonts/slider-back.svg?4e1b8096135389f4ead92fd9042977d2) no-repeat center -150px;
+  background: url(/fonts/slider-back.svg?4e1b8096135389f4ead92fd9042977d2) no-repeat center -250px;
   background-size: cover;
 }
 
 #slider figure img {
   width: 100%;
   max-width: 480px;
-  margin: 0 auto;
+  margin: 0 auto 3em;
 }
 
 #slider.single-page {
@@ -3462,6 +3462,15 @@ img.is-centered {
 .is-long-button {
   padding-right: 3em;
   padding-left: 3em;
+}
+
+.is-block-content {
+  padding: 4em;
+}
+
+.is-content-middle {
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 .pricing .hero-body {
@@ -3520,6 +3529,10 @@ img.is-centered {
   font-size: 2.75em;
 }
 
+.title:not(.is-spaced) + .subtitle {
+  margin-top: -1em;
+}
+
 ul.features {
   letter-spacing: 1px;
   /*font-size: 14px;*/
@@ -3535,9 +3548,6 @@ ul.features li {
 
 ul.features li span {
   display: inline-block;
-  /*padding: 5px 10px;*/
-  /*border-radius: 5px;*/
-  /*background: #eee;*/
 }
 
 ul.features li span:before {
@@ -3545,6 +3555,7 @@ ul.features li span:before {
   font-family: "FontAwesome";
   display: inline-block;
   margin-right: 3px;
+  color: #23d160;
 }
 
 .navbar.is-transparent {
@@ -3597,18 +3608,7 @@ aside .menu-list a:hover {
 
 #sl p {
   opacity: .6;
-}
-
-#sl:after {
-  content: "";
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  bottom: -100px;
-  left: 50%;
-  margin-left: -50px;
-  border: 50px solid transparent;
-  border-top: 25px solid #3273dc;
+  font-size: 15px;
 }
 
 .no-border-radius {

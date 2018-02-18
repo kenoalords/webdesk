@@ -8,27 +8,15 @@
     <!-- <div class="red-back"></div> -->
     <!-- <div class="grey-back"></div> -->
     <!-- <div class="blue-back"></div> -->
-    <div class="hero-body">
+    <div class="hero-body" style="padding-bottom: 2em">
         <div class="columns is-centered">
             <div class="column is-8 has-text-centered">
                 <h1 class="title is-1 has-text-white is-size-4-mobile is-size-2-tablet">
                     We build and manage Professional Websites for Businesses
                 </h1>
-                <p><a href="/register" class="button is-success is-raised is-long-button"><span>Sign up today</span> <span class="icon"><i class="fa fa-arrow-right"></i></span></a></p>
                 <figure class="image">
                     <img src="{{ asset('images/imac.png') }}" alt="Webdesk work sample">
                 </figure>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="hero" id="teaser">
-    <div class="hero-body">
-        <div class="columns">
-            <div class="column is-8 is-offset-2 has-text-centered">
-                <h1 class="title is-3 is-size-4-mobile" style="letter-spacing: -1px">Get a professional website to showcase your business and services, <span class="has-text-success">pay monthly.</span></h1>
-                <p>Our goal isn’t to just make great websites that your customers will love you for, but to create an experience that they will remember and ultimately drive sales.</p>
                 <p>
                     <a href="/pricing?utm_source=landing_page&utm_medium=pricing_link_click&utm_campaign=landing_page_optimization" class="button is-raised is-success is-long-button">
                         <span>View Pricing</span>
@@ -40,13 +28,26 @@
     </div>
 </div>
 
-<div class="has-text-centered">
-    <h3 class="is-primary-wrap">
-        <div class="title is-4">We've got you covered</div>
-    </h3>
+<div class="hero is-success is-bold" style="">
+    <div class="hero-body is-paddingless">
+        <div class="columns is-marginless">
+            <div class="column is-6 is-paddingless" style="line-height: 0; background: url({{ asset('images/professional-worker.jpg') }}) no-repeat center; background-size: cover ">
+                <img src="{{ asset('images/professional-worker.jpg') }}" alt="Get a professional website to showcase your business and services" style="visibility: hidden;">
+            </div>
+            <div class="column is-6 is-content-middle is-block-content">
+                <div class="">
+                    <h1 class="title is-2 is-size-4-mobile" style="letter-spacing: -1px">Owning a website never felt this easy.</h1>
+                    <p>Now i can focus on my business and let Webdesk manage my online presence.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="hero is-link is-medium" id="sl">
+
+<div class="hero" id="sl">
     <div class="hero-body">
+        <h3 class="title is-2 has-text-centered">What you get!</h3>
+        <hr style="opacity: .2">
         <div class="container">
             <div class="columns is-centered is-multiline">
                 <div class="column is-3 has-text-centered">

@@ -58,13 +58,13 @@ img.is-centered{
 	position: relative;
 	top: -54px;
 	z-index: 1;
-	background: url('slider-back.svg') no-repeat center -150px;
+	background: url('slider-back.svg') no-repeat center -250px;
 	background-size: cover;
 	figure{
 		img{
 			width: 100%;
 			max-width:480px;
-			margin: 0 auto;
+			margin: 0 auto 3em;
 		}
 	}
 
@@ -76,6 +76,14 @@ img.is-centered{
 .is-long-button{
 	padding-right: 3em;
 	padding-left: 3em;
+}
+
+.is-block-content{
+	padding: 4em;
+}
+
+.is-content-middle{
+	align-self: center;
 }
 
 .pricing{
@@ -127,6 +135,10 @@ img.is-centered{
 	}
 }
 
+.title:not(.is-spaced) + .subtitle{
+	margin-top: -1em;
+}
+
 ul.features{
 	letter-spacing: 1px;
 	/*font-size: 14px;*/
@@ -138,14 +150,12 @@ ul.features{
 		font-weight: 800;
 		span{
 			display: inline-block;
-			/*padding: 5px 10px;*/
-			/*border-radius: 5px;*/
-			/*background: #eee;*/
 			&:before{
 				content: "\f00c";
 				font-family: "FontAwesome";
 				display: inline-block;
 				margin-right: 3px;
+				color: #23d160;
 			}
 		}
 	}
@@ -201,17 +211,7 @@ aside{
 	}
 	p{
 		opacity: .6;
-	}
-	&:after{
-		content: "";
-		position: absolute;
-		width: 100px;
-		height: 100px;
-		bottom: -100px;
-		left: 50%;
-		margin-left: -50px;
-		border: 50px solid transparent;
-		border-top: 25px solid #3273dc;
+		font-size: 15px;
 	}
 }
 

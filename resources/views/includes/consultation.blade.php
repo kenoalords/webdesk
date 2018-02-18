@@ -1,4 +1,4 @@
-<div class="hero is-info is-medium is-bold">
+<div class="hero is-dark is-medium is-bold">
 	<div class="hero-body">
 		<div class="columns is-centered">
 			<div class="column is-10">
@@ -8,8 +8,8 @@
 						<h4 class="subtitle">Do you want to know how your website performs against your competitors?</h4>
 						<p>Our team of digital experts can audit your current website and show you areas for improvement such as SEO (Search Engine Optimization), UI/UX Design, Lead Generation and Website Conversion Rate.</p>
 						<p>
-							<a href="{{ route('audit') }}" class="button is-white has-text-weight-bold is-raised is-medium">
-								<span>I want a FREE website audit</span>
+							<a href="{{ route('audit') }}" class="button is-success is-raised is-long-button">
+								<span>Audit my website</span>
 								<span class="icon"><i class="fa fa-arrow-right"></i></span>
 							</a>
 						</p>

@@ -1,13 +1,13 @@
-<div class="hero is-light">
+<div class="hero is-light is-medium">
     <div class="hero-body">
         <div class="container">
             <div class="columns is-centered">
-                <div class="column is-one-third">
+                <div class="column is-5">
                     <figure class="image">
-                        <img src="{{ asset('images/new-website-design.png') }}" alt="New Website Design Every 2 Years">
+                        <img src="{{ asset('images/redesign.svg') }}" alt="New Website Design Every 2 Years">
                     </figure>
                 </div>
-                <div class="column is-three-thirds">
+                <div class="column is-7 is-content-middle">
                     <h2 class="title is-3">Get a brand new design every 2 years</h2>
                     <h4 class="subtitle">You heard that right!</h4>
                     <p>If you sign up to one of our pay monthly packages, we offer a complete website redesign every 2 years. We understand that trends and your business may change over time, instead of having to build a brand new website, let us do it all for you.</p>
