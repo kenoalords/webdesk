@@ -8,7 +8,7 @@
                         <div class="card-content has-text-centered">
                             <div v-if="!isSubmitted">
                                 <img :src="iconUrl" alt="Email popup" class="image is-128x128 is-centered">
-                                <h3 class="title is-marginless">Get a FREE website review</h3>
+                                <h3 class="title is-3 is-size-5-mobile is-marginless">Get a FREE website review</h3>
                                 <p>Find out how your company's website can be improved, free of charge and with no obligation</p>
 
                                 <div class="field">
@@ -108,6 +108,7 @@
             setTimeout(()=>{
                 if ( !sessionStorage.getItem('popup') ){
                     this.isActive = true;
+                    sessionStorage.setItem('popup', true);
                 }
             }, 5000);
             // $(document).on('mouseleave', ()=>{

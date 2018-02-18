@@ -48207,9 +48207,14 @@ var render = function() {
                                 attrs: { src: _vm.iconUrl, alt: "Email popup" }
                               }),
                               _vm._v(" "),
-                              _c("h3", { staticClass: "title is-marginless" }, [
-                                _vm._v("Get a FREE website review")
-                              ]),
+                              _c(
+                                "h3",
+                                {
+                                  staticClass:
+                                    "title is-3 is-size-5-mobile is-marginless"
+                                },
+                                [_vm._v("Get a FREE website review")]
+                              ),
                               _vm._v(" "),
                               _c("p", [
                                 _vm._v(
