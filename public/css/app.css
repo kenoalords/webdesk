@@ -3964,8 +3964,8 @@ input[type="checkbox"].is-toggle:checked:after {
     font-size: 1.2em;
   }
 
-  #slider .red-back {
-    width: 110%;
+  #slider.is-pricing {
+    background-position: center -50px;
   }
 
   .is-home {
@@ -3983,7 +3983,7 @@ input[type="checkbox"].is-toggle:checked:after {
   }
 
   .pricing .hero-body {
-    padding: 0;
+    padding: 0 1em;
   }
 
   #email-popup .modal-content .card-content {

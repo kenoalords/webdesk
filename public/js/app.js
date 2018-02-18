@@ -48163,6 +48163,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         setTimeout(function () {
             if (!sessionStorage.getItem('popup')) {
                 _this.isActive = true;
+                sessionStorage.setItem('popup', true);
             }
         }, 5000);
         // $(document).on('mouseleave', ()=>{
