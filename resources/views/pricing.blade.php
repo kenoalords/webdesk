@@ -6,17 +6,12 @@
 
 <div class="hero is-medium" id="slider">    
     <div class="hero-body" id="slider-content">
-        <div class="hero is-small">
-            <div class="hero-body">
-                <div class="columns">
-                    <div class="column is-8 is-offset-2 has-text-centered ">
-                        <h1 class="title is-1 is-size-2-mobile has-text-white">Choose a plan that's perfect for your business</h1>
-                        <h4 class="subtitle has-text-white" style="margin-top: .5em">We offer Bespoke, feature packed and top notch support across all packages</h4>
-                    </div>
-                </div>
+        <div class="columns">
+            <div class="column is-8 is-offset-2 has-text-centered ">
+                <h1 class="title is-2 is-size-4-mobile has-text-white">Choose a plan that's perfect for your business</h1>
+                <h4 class="subtitle has-text-white" style="margin-top: .5em">We offer Bespoke, feature packed and top notch support across all packages</h4>
             </div>
         </div>
-        
     </div>
 </div>
 

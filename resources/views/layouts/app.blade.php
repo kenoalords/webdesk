@@ -52,7 +52,7 @@
                             <a href="/pricing" class="navbar-item {{ (Request::path() == '/pricing') ? 'is-active' : '' }}">Pricing</a>
                             <a href="/contact" class="navbar-item">Contact</a>
                             <div class="navbar-item">
-                            <a href="/login" class="button is-success" style="padding-right: 2em; padding-left: 2em">
+                            <a href="/login" class="button is-white" style="padding-right: 2em; padding-left: 2em">
                                     <span class="icon"><i class="fa fa-lock"></i></span>
                                     <span>Client login</span>
                             </a>
