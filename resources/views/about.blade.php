@@ -5,7 +5,7 @@
 
 @section('content')
 
-<div class="hero is-medium" id="slider">
+<div class="hero is-medium is-home is-pricing" id="slider">
     <!-- <div class="red-back" style="top: -150px; right: 0"></div> -->
     <!-- <div class="red-back"></div>
     <div class="grey-back"></div>
@@ -14,8 +14,8 @@
     <div class="hero-body">
         <div class="columns">
             <div class="column is-6 is-offset-3 has-text-centered ">
-                <h1 class="title is-1 has-text-white">We are webdesk.ng</h1>
-                <h4 class="subtitle has-text-white" style="margin-top: .5em">We offer Bespoke, feature packed and top notch website design and management services.</h4>
+                <h1 class="title is-2 is-size-4-mobile has-text-white">We are webdesk.ng</h1>
+                <h4 class="subtitle is-size-6-mobile has-text-white" style="margin-top: .5em">We offer Bespoke, feature packed and top notch website design and management services.</h4>
             </div>
         </div>
     </div>

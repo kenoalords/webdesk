@@ -2,12 +2,12 @@
 
 @section('content')
 
-<div class="hero is-medium" id="slider" style="min-height: 420px">    
+<div class="hero is-medium is-home is-pricing" id="slider" style="min-height: 420px">    
     <div class="hero-body">
         <div class="columns">
             <div class="column is-8 is-offset-2 has-text-centered ">
-                <h1 class="title is-1 is-size-3-mobile has-text-white">Get in touch today</h1>
-                <h4 class="subtitle has-text-white" style="margin-top: .5em">
+                <h1 class="title is-2 is-size-4-mobile has-text-white">Get in touch today</h1>
+                <h4 class="subtitle is-size-6-mobile has-text-white" style="margin-top: .5em">
                 	We are ready to discuss your next project.
                 </h4>
             </div>
