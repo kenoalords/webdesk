@@ -71,7 +71,7 @@
 					</div>
 					<div class="column is-4">
 						<h4 class="subtitle is-size-6 has-text-grey-lighter">Call us on</h4>
-						<h3 class="title is-3"><a href="tel:09022422022">090 2242 2022</a></h3>
+						<h3 class="title is-3"><a href="tel:08094366415">080 943 66415</a></h3>
 
 						<h4 class="subtitle is-size-6 has-text-grey-lighter" style="margin-top: 1em; margin-bottom: 0">Connect with us</h4>
 						<ul class="social-links-sidebar">

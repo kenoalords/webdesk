@@ -10,16 +10,16 @@
     <!-- <div class="blue-back"></div> -->
     <div class="hero-body" style="padding-bottom: 2em">
         <div class="columns is-centered">
-            <div class="column is-8 has-text-centered">
+            <div class="column is-7 has-text-centered">
                 <h1 class="title is-1 has-text-white is-size-4-mobile is-size-2-tablet">
-                    We build and manage Professional Websites for Businesses
+                    Get a Professional Websites for your Businesses and Services
                 </h1>
                 <figure class="image">
                     <img src="{{ asset('images/imac.png') }}" alt="Webdesk work sample">
                 </figure>
                 <p>
-                    <a href="/pricing?utm_source=landing_page&utm_medium=pricing_link_click&utm_campaign=landing_page_optimization" class="button is-raised is-success is-long-button">
-                        <span>View Pricing</span>
+                    <a href="/pricing?utm_source=landing_page&utm_medium=pricing_link_click&utm_campaign=landing_page_optimization" class="button is-raised is-link is-medium is-long-button">
+                        <span>Sign up today</span>
                         <span class="icon is-small"> <i class="fa fa-arrow-right"></i></span>
                     </a>
                 </p>
@@ -28,7 +28,7 @@
     </div>
 </div>
 
-<div class="hero is-success is-bold" style="">
+<div class="hero is-dark is-bold" style="">
     <div class="hero-body is-paddingless">
         <div class="columns is-marginless">
             <div class="column is-6 is-paddingless" style="line-height: 0; background: url({{ asset('images/professional-worker.jpg') }}) no-repeat center; background-size: cover ">
