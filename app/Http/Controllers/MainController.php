@@ -44,4 +44,9 @@ class MainController extends Controller
         }
         return view('audit_initiated');
     }
+
+    public function createAWebsite()
+    {
+        return view('create-website');
+    }
 }

@@ -15,6 +15,7 @@ Route::get('/', 'MainController@homepage');
 Route::get('/about', 'MainController@aboutPage');
 Route::get('/terms', 'MainController@termsPage')->name('terms');
 Route::get('/website-audit', 'MainController@audit')->name('audit');
+Route::get('/create-a-website', 'MainController@createAWebsite')->name('website');
 Route::get('/website-audit/initiated', 'MainController@auditInitiated')->name('audit_initiated');
 Route::get('/pricing', 'MainController@pricingPage');
 Route::get('/privacy', 'MainController@privacy')->name('privacy');

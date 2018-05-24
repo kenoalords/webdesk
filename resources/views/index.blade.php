@@ -4,108 +4,101 @@
 
 @section('content')
 
-<div class="hero is-medium is-home" id="slider">
-    <!-- <div class="red-back"></div> -->
-    <!-- <div class="grey-back"></div> -->
-    <!-- <div class="blue-back"></div> -->
-    <div class="hero-body" style="padding-bottom: 2em">
-        <div class="columns is-centered">
-            <div class="column is-7 has-text-centered">
-                <h1 class="title is-1 has-text-white is-size-4-mobile is-size-2-tablet">
-                    Get a Professional Websites for your Businesses and Services
-                </h1>
-                <figure class="image">
-                    <img src="{{ asset('images/imac.png') }}" alt="Webdesk work sample">
-                </figure>
-                <p>
-                    <a href="/pricing?utm_source=landing_page&utm_medium=pricing_link_click&utm_campaign=landing_page_optimization" class="button is-raised is-link is-medium is-long-button">
-                        <span>Sign up today</span>
-                        <span class="icon is-small"> <i class="fa fa-arrow-right"></i></span>
-                    </a>
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="hero is-dark is-bold" style="">
-    <div class="hero-body is-paddingless">
-        <div class="columns is-marginless">
-            <div class="column is-6 is-paddingless" style="line-height: 0; background: url({{ asset('images/professional-worker.jpg') }}) no-repeat center; background-size: cover ">
-                <img src="{{ asset('images/professional-worker.jpg') }}" alt="Get a professional website to showcase your business and services" style="visibility: hidden;">
-            </div>
-            <div class="column is-6 is-content-middle is-block-content">
-                <div class="">
-                    <h1 class="title is-2 is-size-4-mobile" style="letter-spacing: -1px">Owning a website never felt this easy.</h1>
-                    <p>Now i can focus on my business and let Webdesk manage my online presence.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="hero" id="sl">
-    <div class="hero-body">
-        <h3 class="title is-2 has-text-centered is-size-4-mobile">What you get!</h3>
-        <hr style="opacity: .2">
-        <div class="container">
-            <div class="columns is-centered is-multiline">
-                <div class="column is-3 has-text-centered">
-                    <img src="{{ asset('images/monitor.svg') }}" alt="Professional Website">
-                    <h4 class="title has-text-weight-bold is-6">Professional Website</h4>
-                    <p>Custom website design best to meet your business needs.</p>
-                </div>
-                <div class="column is-3 has-text-centered">
-                    <img src="{{ asset('images/smartphone.svg') }}" alt="Mobile Optimization">
-                    <h4 class="title has-text-weight-bold is-6">Mobile Optimized</h4>
-                    <p>Our designs are mobile and tablet ready and can be viewed across all major devices</p>
-                </div>
-                <div class="column is-3 has-text-centered">
-                    <img src="{{ asset('images/message.svg') }}" alt="Business Email">
-                    <h4 class="title has-text-weight-bold is-6">Business Email</h4>
-                    <p>Send and receive emails from any device using your customized email address</p>
-                </div>
-                <div class="column is-3 has-text-centered">
-                    <img src="{{ asset('images/seo.svg') }}" alt="SEO Optimization">
-                    <h4 class="title has-text-weight-bold is-6">SEO Optimization</h4>
-                    <p>Send and receive emails from any device using your customized email address</p>
-                </div>
-                <div class="column is-3 has-text-centered">
-                    <img src="{{ asset('images/hosting.svg') }}" alt="Secured Website Hosting">
-                    <h4 class="title has-text-weight-bold is-6">Secured Hosting</h4>
-                    <p>Our U.S servers are fast, reliable and highly secured. You will love them.</p>
-                </div>
-                <div class="column is-3 has-text-centered">
-                    <img src="{{ asset('images/alarm-clock.svg') }}" alt="Monthly Website Maintanence">
-                    <h4 class="title has-text-weight-bold is-6">Monthly Maintanence</h4>
-                    <p>We are always on hand to ensure that your website runs smoothly every month.</p>
-                </div>
-                <div class="column is-3 has-text-centered">
-                    <img src="{{ asset('images/analytics.svg') }}" alt="Website Google Analytics">
-                    <h4 class="title has-text-weight-bold is-6">Website Analytics</h4>
-                    <p>Track visits to your website with ease using Google Analytics and focus on your visitors</p>
-                </div>
-                <div class="column is-3 has-text-centered">
-                    <img src="{{ asset('images/wordpress.svg') }}" alt="Wordpress Development">
-                    <h4 class="title has-text-weight-bold is-6">WordPress CMS</h4>
-                    <p>Our websites are built on WordPress Content Management System allowing unlimited changes to your website</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="hero">
+<div class="hero is-fullheight is-green" id="slider">
     <div class="hero-body">
         <div class="container">
-            @include('includes.pricing', ['use_title' => true])
+            <div class="columns">
+                <div class="column is-10">
+                    <h1 class="title is-1 has-text-white is-size-4-mobile is-size-2-tablet">
+                        Grow your business with a professional website that convert visitors to customers
+                    </h1>
+                    <p class="has-text-white">
+                        We make it <em><strong class="has-text-white"><u>extremely</u></strong></em> easy to own a professional website by doing the heavy lifting while you focus on growing your business.
+                    </p>
+                    <p>
+                        <a href="/about?utm_source=landing_page&utm_medium=pricing_link_click&utm_campaign=landing_page_optimization" class="button is-danger is-medium is-long-button">
+                            <span>Learn more</span>
+                            <span class="icon is-small"> <i class="fa fa-arrow-right"></i></span>
+                        </a>
+                        <a href="/pricing/?utm_source=landing_page&utm_medium=pricing_link_click&utm_campaign=landing_page_optimization" class="button is-white is-long-button is-medium is-outlined">
+                            <span>View our plans</span>
+                        </a>
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
-@include('includes.redesign')
+<div class="hero is-medium">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-9">
+                    <h2 class="title is-3 block-title">Focus on business growth not website management.</h2>
+                    <p>We are very passionate about helping business thrive in this modern era, this is why our main goal is to abstract and handle your online needs, giving you more time to focus on your business.</p>
+                    <p>The benefits of having a website cannot be over-emphasized. However, maintaning your website in this fast changing world can be a challenge, this is where we come in.</p>
+                    <h3 class="title is-5">We build, manage and scale your website while you sleep.</h3>
+                    <p>Sounds easy right? Its cheaper than you think</p>
+                    <p>
+                        <a href="/pricing" class="button is-medium is-long-button is-danger">View our plans</a>
+                    </p>
+                </div>
+                <div class="column is-3">
+                    <figure class="image">
+                        <img src="{{ asset('images/space-shuttle.svg') }}" alt="Website Design">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-@include('includes.consultation')
+<div class="hero is-light is-medium">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns">
+                <div class="column">
+                    <figure class="image">
+                        <img src="{{ asset('images/revenue.svg') }}" alt="Increase your revenue when you signup">
+                    </figure>
+                </div>
+                <div class="column is-9">
+                    <h2 class="title is-3 block-title">Save up to 94% monthly on website running cost when you hire us.</h2>
+                    <p>Most businesses hire a webmaster to maintain and update their website on a daily or weekly basis. This is entirely fine for most business owners who can afford it.</p>
+                    <p>However, if you will like to save <u class="has-text-weight-bold">94%</u> of that money and still enjoy the benefits of an in-house webmaster without the overheads, we are here for you.</p>
+                    <p>
+                        <a href="/pricing" class="button is-medium is-long-button is-danger">View our plans</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="hero is-medium" id="benefits">
+    <div class="hero-body">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8">
+                    <h2 class="title is-3 block-title">Enjoy these amazing benefits and much more.</h2>
+                    <p>When you sign up for any of our website design packages, you enjoy all the benefits of partnering with a Web Agency that's focused on growth using modern methodology to achieve success.</p>
+                    <p>All our Website design packages come standard with the following features to help you achieve more within the shortest time possible.</p>
+
+                    @include('includes.features-list')
+                    <p>
+                        <a href="/pricing" class="button is-medium is-long-button is-danger">Sign up today</a>
+                    </p>
+                </div>
+                <div class="column">
+                    <figure class="image">
+                        <img src="{{ asset('images/benefits.svg') }}" alt="Benefits of signing up">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 @include('includes.works')
 
@@ -121,7 +114,5 @@
         </div>
     </div>
 </div>
-
-@include('includes.why_pay')
 
 @endsection

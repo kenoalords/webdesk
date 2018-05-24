@@ -11,7 +11,7 @@
         <title>@yield('title') {{ config('app.name') }} - Best Website Designers and Manager in Lagos, Nigeria.</title>
         <meta name="description" content="@yield('description')">
 
-        <link rel="icon" href="{{ asset('favicon.png') }}" type="image/png">
+        <link rel="icon" href="{{ asset('images/favicon.png') }}" type="image/png">
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <script>
@@ -32,8 +32,7 @@
         <div id="app">
             <email-popup></email-popup>
             <div id="main-header">
-                <div class="columns is-centered">
-                    <div class="column is-8">
+                <div class="container">
                     <nav class="navbar is-primary is-transparent is-fixed-top-mobile" role="navigation" aria-label="main navigation">
                         <div class="navbar-brand">
                             <a class="navbar-item" href="/">
@@ -48,11 +47,11 @@
                         </div>
                         <div class="navbar-menu navbar-end">
                             <a href="/" class="navbar-item {{ (Request::path() == '/') ? 'is-active' : '' }}">Home</a>
-                            <a href="/about" class="navbar-item">About</a>
+                            <a href="/about" class="navbar-item">What we do</a>
                             <a href="/pricing" class="navbar-item {{ (Request::path() == '/pricing') ? 'is-active' : '' }}">Pricing</a>
                             <a href="/contact" class="navbar-item">Contact</a>
                             <div class="navbar-item">
-                            <a href="/login" class="button is-white" style="padding-right: 2em; padding-left: 2em">
+                            <a href="/login" class="button is-danger" style="padding-right: 2em; padding-left: 2em">
                                     <span class="icon"><i class="fa fa-lock"></i></span>
                                     <span>Client login</span>
                             </a>
@@ -60,19 +59,18 @@
                             <!-- <div class="navbar-item"></div> -->
                         </div> <!-- Navbar menu -->
                     </nav>
-                    </div>
                 </div>
             </div>
             @yield('content')
-            
+
             <div class="hero is-info">
                 <div class="hero-body">
                     <div class="content has-text-centered">
-                        <h3 class="title"><a href="tel:08094366415" class="is-size-3 is-size-5-mobile">Call us today on <span class="has-text-weight-bold has-text-white-ter">080 943 66415</span> to speak to an expert</a></h3>
+                        <h3 class="title"><a href="tel:08094366415" class="is-size-3 is-size-5-mobile">Call us today on <span class="has-text-weight-bold has-text-white-ter">080 943 66415</span> to speak to a consultant</a></h3>
                     </div>
                 </div>
             </div>
-            
+
             <footer class="footer">
                 <div class="container">
                     <div class="level">
@@ -122,7 +120,7 @@
           gtag('config', 'UA-114100486-1');
         </script>
 
-        
+
 
     </body>
 </html>

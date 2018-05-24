@@ -4,7 +4,7 @@
         <div class="container">
             <div class="columns is-centered">
                 <div class="column is-two-thirds has-text-centered">
-                    <h2 class="title is-4 is-size-5-mobile pointing-header"><i class="fa fa-comments"></i> What our customers say</h2>
+                    <h2 class="title is-3 is-size-5-mobile"><i class="fa fa-comments"></i> What our clients say about us</h2>
                     <div class="single-slick-js">
                         @foreach($reviews as $review)
                         <div class="testimonials">

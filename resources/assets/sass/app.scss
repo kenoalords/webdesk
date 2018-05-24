@@ -1,18 +1,23 @@
 
 // Fonts
-@import url("https://fonts.googleapis.com/css?family=PT+Sans:300,400,600,800|Montserrat:700,900");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:300,400,600,800|Lato:900");
 @import url('animate.css');
+// @import "./node_modules/bulma/sass/initial-variables.sass";
 
 // Variables
-@import "variables";
-
+// @import "variables";
+$actionColor: #ff3860;
 // Bulma
 body{
 	font-family: "PT Sans", sans-serif;
 }
 
 h1, h2, h3, h4{
-	font-family: "Montserrat", "PT Sans", sans-serif;
+	font-family: "Lato", sans-serif;
+}
+
+.container{
+	max-width: 1024px;
 }
 
 p{
@@ -20,12 +25,20 @@ p{
 	margin-bottom: 1em;
 }
 
+u {
+	text-decoration: underline;
+}
+
+.is-light-grey{
+	background: #85ccc6;
+}
+
 #main-header{
 	position: relative;
 	z-index: 2;
 
 	.navbar-menu{
-		
+
 	}
 }
 
@@ -52,24 +65,70 @@ img.is-centered{
 	color: #95a5a6;
 }
 
+.is-header{
+	position: relative;
+	top: -54px;
+}
+
+blockquote{
+	font-size: 2em;
+	color: #aaa;
+	font-weight: 300;
+	font-style: italic;
+	padding: 2em 1em 2em 2em;
+	position: relative;
+	&:before{
+		content: "\f10d";
+		font-family: "FontAwesome";
+		position: absolute;
+		top:1em;
+		left: 0;
+		color: #eee;
+		font-size: 1.5em;
+	}
+}
+
+.is-green{
+	background: #a0ce5f;
+}
+
 #slider {
-	min-height: 530px;
 	overflow: hidden;
 	position: relative;
 	top: -54px;
 	z-index: 1;
-	background: url('slider-back.svg') no-repeat center -250px;
+	background: url('business-background.jpg') no-repeat center -50px;
 	background-size: cover;
-	figure{
-		img{
-			width: 100%;
-			max-width:480px;
-			margin: 0 auto 3em;
+
+	&.is-home{
+		padding: 5em 2em;
+		p{
+			color: #aaa;
+			font-size: 20px;
+		}
+		h1.title{
+			font-size: 3em !important;
 		}
 	}
 
 	&.single-page{
 		min-height: 520px;
+	}
+}
+
+.block-title{
+	position: relative;
+	margin-bottom: .5em;
+	padding-bottom: .5em;
+	&:after{
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: -5px;
+		height: 5px;
+		border-radius: 10px;
+		width: 100px;
+		background: $actionColor;
 	}
 }
 
@@ -139,6 +198,16 @@ img.is-centered{
 	margin-top: -1em;
 }
 
+#benefits{
+	ul.features{
+		margin-bottom: 1em;
+		li{
+			width: 33%;
+			font-size: 14px;
+		}
+	}
+}
+
 ul.features{
 	letter-spacing: 1px;
 	/*font-size: 14px;*/
@@ -204,7 +273,6 @@ aside{
 	}
 	.title{
 		&.is-6{
-			letter-spacing: 1px;
 			margin-bottom: .5em;
 		}
 		opacity: 1;
@@ -539,8 +607,17 @@ input[type="checkbox"].is-toggle:checked:after{
 	animation-duration: 1s;
 }
 
-@media screen and (min-width:240px) and (max-width: 480px){
+#landing-page-banner{
+	background: url('../images/city-scape.jpg') no-repeat center;
+	background-size: cover;
+}
 
+@media screen and (min-width:240px) and (max-width: 480px){
+	#benefits ul.features{
+		li{
+			width: 100%;
+		}
+	}
 	.is-primary-wrap{
 		.title{
 			font-size: 1.2em;
@@ -573,7 +650,7 @@ input[type="checkbox"].is-toggle:checked:after{
 			.card-content {
 				padding: 1em;
 			}
-		} 
+		}
 	}
 }
 
@@ -591,7 +668,7 @@ input[type="checkbox"].is-toggle:checked:after{
 			width: 50%;
 		}
 	}
-	
+
 }
 
 @media screen and (min-width:769px) and (max-width: 1024px){
@@ -601,5 +678,3 @@ input[type="checkbox"].is-toggle:checked:after{
 		}
 	}
 }
-
-

@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="hero is-medium is-home is-pricing" id="slider" style="min-height: 420px">    
+<div class="hero is-medium is-primary is-header">    
     <div class="hero-body">
         <div class="columns">
             <div class="column is-8 is-offset-2 has-text-centered ">

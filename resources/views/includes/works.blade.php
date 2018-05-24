@@ -1,6 +1,8 @@
 <div class="hero is-light">
     <div class="hero-body">
         <div class="container">
+            <h3 class="title is-4 has-text-centered">Some of our works</h3>
+            <hr style="opacity: .5">
             <div class="slick-js three">
                 <figure>
                     <img src="{{ asset('images/radix.jpg') }}" alt="Radix Pension Fund Managers">

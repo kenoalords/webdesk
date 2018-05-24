@@ -14,6 +14,7 @@ let mix = require('laravel-mix');
 mix.js('resources/assets/js/app.js', 'public/js')
    .combine([
    			'node_modules/bulma/css/bulma.css',
+   			'node_modules/bulma-pricingtable/dist/bulma-pricingtable.min.css',
    			'node_modules/slick-carousel/slick/slick.css',
    			'node_modules/slick-carousel/slick/slick-theme.css',
    		], 'public/css/default.css')
